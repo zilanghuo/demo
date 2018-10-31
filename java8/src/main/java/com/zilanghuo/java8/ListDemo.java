@@ -2,6 +2,7 @@ package com.zilanghuo.java8;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * @author laiwufa
@@ -9,6 +10,28 @@ import java.util.List;
  * use:
  */
 public class ListDemo {
+
+    @org.junit.Test
+    public void copyOnWriteArrayList(){
+        List<Long> arrayList = new ArrayList();
+        long start = System.currentTimeMillis();
+        for (int i =0 ;i< 20 * 10000;i++){
+            arrayList.add(System.currentTimeMillis());
+        }
+        List<Long> arrayListToCopy = new CopyOnWriteArrayList(arrayList);
+        // 22464596
+        System.out.println("arrayList cost:"+(System.currentTimeMillis()- start));
+
+        List<Long> copyOnWriteArrayList = new CopyOnWriteArrayList(arrayList);
+        long start2 = System.currentTimeMillis();
+        for (int i =0 ;i< 20 * 10000;i++){
+            copyOnWriteArrayList.add(System.currentTimeMillis());
+        }
+        // 52130161129
+        System.out.println("copyOnWriteArrayList cost:"+(System.currentTimeMillis()- start2));
+
+    }
+
 
     @org.junit.Test
     public void subListFailFast() {
