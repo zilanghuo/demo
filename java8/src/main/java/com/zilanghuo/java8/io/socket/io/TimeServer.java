@@ -1,4 +1,4 @@
-package com.zilanghuo.nio;
+package com.zilanghuo.java8.io.socket.io;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -44,6 +44,7 @@ class TimeServerHandler implements Runnable {
             writer = new PrintWriter(clientProxxy.getOutputStream());
             while (true) {//因为一个client可以发送多次请求，这里的每一次循环，相当于接收处理一次请求
                 String request = reader.readLine();
+                System.out.println("接收到的请求：" + request);
                 if (!"GET CURRENT TIME".equals(request)) {
                     writer.println("BAD_REQUEST");
                 } else {
