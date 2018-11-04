@@ -12,23 +12,23 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class ListDemo {
 
     @org.junit.Test
-    public void copyOnWriteArrayList(){
+    public void copyOnWriteArrayList() {
         List<Long> arrayList = new ArrayList();
         long start = System.currentTimeMillis();
-        for (int i =0 ;i< 20 * 10000;i++){
+        for (int i = 0; i < 20 * 10000; i++) {
             arrayList.add(System.currentTimeMillis());
         }
         List<Long> arrayListToCopy = new CopyOnWriteArrayList(arrayList);
         // 22464596
-        System.out.println("arrayList cost:"+(System.currentTimeMillis()- start));
+        System.out.println("arrayList cost:" + (System.currentTimeMillis() - start));
 
         List<Long> copyOnWriteArrayList = new CopyOnWriteArrayList(arrayList);
         long start2 = System.currentTimeMillis();
-        for (int i =0 ;i< 20 * 10000;i++){
+        for (int i = 0; i < 20 * 10000; i++) {
             copyOnWriteArrayList.add(System.currentTimeMillis());
         }
         // 52130161129
-        System.out.println("copyOnWriteArrayList cost:"+(System.currentTimeMillis()- start2));
+        System.out.println("copyOnWriteArrayList cost:" + (System.currentTimeMillis() - start2));
 
     }
 
