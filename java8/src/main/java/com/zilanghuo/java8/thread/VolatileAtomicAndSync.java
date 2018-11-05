@@ -2,10 +2,9 @@ package com.zilanghuo.java8.thread;
 
 /**
  * @author Acer
- * volatile 变量无法保证线程安全，只能保证内存可见性
- * 如果要变成线程安全，那么使用synchronized 锁
+ *  volatile 变量无法保证线程安全，只能保证内存可见性
  */
-public class VolatileNotAtomic {
+public class VolatileAtomicAndSync {
 
     private static volatile long count = 0L;
 
@@ -15,7 +14,9 @@ public class VolatileNotAtomic {
         Thread subtractThread = new SubtractThread();
         subtractThread.start();
         for (int i = 0; i < NUMBER; i++) {
-            count++;
+            synchronized (VolatileAtomicAndSync.class){
+                count++;
+            }
         }
         while (subtractThread.isAlive()) {
         }
@@ -26,7 +27,9 @@ public class VolatileNotAtomic {
         @Override
         public void run() {
             for (int i = 0; i < NUMBER; i++) {
-                count--;
+                synchronized (VolatileAtomicAndSync.class){
+                    count--;
+                }
             }
         }
     }
