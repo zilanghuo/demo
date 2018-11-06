@@ -1,4 +1,4 @@
-package com.zilanghuo.java8.thread.Cyclicbarrier;
+package com.zilanghuo.java8.thread.cyclicbarrier;
 
 import java.util.concurrent.CyclicBarrier;
 
