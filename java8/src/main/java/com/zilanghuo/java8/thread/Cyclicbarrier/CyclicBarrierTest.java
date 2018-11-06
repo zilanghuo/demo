@@ -7,7 +7,7 @@ import java.util.concurrent.CyclicBarrier;
  * @date 2018/11/6
  * use:回环栅栏，等四个线程都执行完毕，才会执行下一步
  */
-public class cyclicBarrierTest {
+public class CyclicBarrierTest {
     public static void main(String[] args) throws Exception {
         int N = 4;
         CyclicBarrier cyclicBarrier = new CyclicBarrier(N);
