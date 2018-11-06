@@ -14,11 +14,9 @@ public class PlayerCountdownLatchTest {
 
     private static final int PLAYER_COUNT = 5;
 
-    public static void main(String[] args) {
-
+    public static void main(String[] args) throws Exception {
         CountDownLatch begin = new CountDownLatch(1);
         CountDownLatch end = new CountDownLatch(5);
-
         Player[] players = new Player[5];
         for (int i = 0; i < PLAYER_COUNT; i++) {
             players[i] = new Player(i + 1, begin, end);
@@ -30,23 +28,14 @@ public class PlayerCountdownLatchTest {
         System.out.println("race begin:");
         //线程都放入线程池，相当于初始化完毕，准备就绪
         begin.countDown();
-        try {
             // 只有当end为0时，宣布比赛结束
-            end.await();
-        } catch (InterruptedException e) {
-
-        } finally {
-            System.out.println("race end!");
-        }
+        end.await();
+        System.out.println("race end!");
         executorService.shutdown();
-
     }
-
-
 }
 
 class Player implements Runnable {
-
     private int id;
     private CountDownLatch begin;
     private CountDownLatch end;
@@ -56,7 +45,6 @@ class Player implements Runnable {
         this.begin = begin;
         this.end = end;
     }
-
     @Override
     public void run() {
         try {

@@ -16,14 +16,11 @@ public class CustomCheckWindow {
 
 class SecurityCheckThread extends Thread {
     private int seq;
-
     private Semaphore semaphore;
-
     public SecurityCheckThread(int seq, Semaphore semaphore) {
         this.seq = seq;
         this.semaphore = semaphore;
     }
-
     @Override
     public void run() {
         try {
@@ -33,15 +30,11 @@ class SecurityCheckThread extends Thread {
                 Thread.sleep(1000);
                 System.out.println("no." + seq + "身份可疑，不能登机！");
             }
-
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
             semaphore.release();
             System.out.println("No." + seq + "已完成服务。");
         }
-
     }
-
-
 }
