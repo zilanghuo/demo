@@ -13,6 +13,8 @@ public class ListDemo {
 
     @org.junit.Test
     public void copyOnWriteArrayList() {
+        System.out.println(Integer.SIZE - 3);
+        System.out.println(-1 << 2);
         List<Long> arrayList = new ArrayList();
         long start = System.currentTimeMillis();
         for (int i = 0; i < 20 * 10000; i++) {

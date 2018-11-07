@@ -24,6 +24,7 @@
         <module>spi</module>
         <module>java8</module>
         <module>netty</module>
+        <module>log</module>
     </modules>
 
 
