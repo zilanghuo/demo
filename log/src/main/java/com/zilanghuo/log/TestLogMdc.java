@@ -25,18 +25,15 @@ public class TestLogMdc {
         for (int i = 0; i < 10; i++) {
             MDC.put("key", "value-" + i);
             int finalI = i;
-            poolExecutor.execute(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        if (finalI < 3) {
-                            MDC.put("key", "executor-" + finalI);
-                        }
-                        Thread.sleep(20);
-                    } catch (InterruptedException e) {
+            poolExecutor.execute(() -> {
+                try {
+                    if (finalI < 3) {
+                        MDC.put("key", "executor-" + finalI);
                     }
-                    logger.info("--");
+                    Thread.sleep(20);
+                } catch (InterruptedException e) {
                 }
+                logger.info("--");
             });
         }
         // 重置MDC的值
