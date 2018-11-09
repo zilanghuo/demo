@@ -3,6 +3,7 @@ package com.zilanghuo.java8;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author laiwufa
@@ -13,6 +14,9 @@ public class ListDemo {
 
     @org.junit.Test
     public void copyOnWriteArrayList() {
+
+
+
         System.out.println(Integer.SIZE - 3);
         System.out.println(-1 << 2);
         List<Long> arrayList = new ArrayList();

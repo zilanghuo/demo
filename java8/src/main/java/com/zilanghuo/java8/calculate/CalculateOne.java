@@ -2,6 +2,8 @@ package com.zilanghuo.java8.calculate;
 
 import org.junit.Test;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 /**
  * @author laiwufa
  * @date 2018/11/8
@@ -12,6 +14,12 @@ import org.junit.Test;
  * java中负数是以补码形式保存在数据库的
  */
 public class CalculateOne {
+
+    public static void main(String[] args) {
+        AtomicInteger ctl = new AtomicInteger(5);
+        System.out.println( ctl.compareAndSet(4,-1));
+        System.out.println(ctl.get());
+    }
 
     @Test
     public void testMove() {

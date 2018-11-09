@@ -23,10 +23,10 @@ public class Circulate {
          * retyr：后面跟随的是循环
          */
         for (int i = 0; i < 5; i++) {
-            retry2:
+            //     retry2:
             while (i == 3) {
                 System.out.println("continue 3");
-                continue retry2;
+                //           continue retry2;
             }
             System.out.println(i);
         }
