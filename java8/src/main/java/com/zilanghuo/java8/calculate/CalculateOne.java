@@ -16,7 +16,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class CalculateOne {
 
     public static void main(String[] args) {
-        AtomicInteger ctl = new AtomicInteger(5);
+        AtomicInteger ctl = new AtomicInteger(8);
         System.out.println( ctl.compareAndSet(4,-1));
         System.out.println(ctl.get());
     }
