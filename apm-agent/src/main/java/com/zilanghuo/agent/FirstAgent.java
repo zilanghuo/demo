@@ -10,13 +10,9 @@ import java.security.ProtectionDomain;
  */
 public class FirstAgent implements ClassFileTransformer {
 
-    public final String injectedClassName = "com.xueyou.agentdemo.App";
-
-    public final String methodName = "hello";
-
     @Override
     public byte[] transform(ClassLoader loader, String className, Class<?> classBeingRedefined, ProtectionDomain protectionDomain, byte[] classfileBuffer) throws IllegalClassFormatException {
-        System.out.println("className:" + className);
+      //  System.out.println("className:" + className);
         return null;
     }
 }
