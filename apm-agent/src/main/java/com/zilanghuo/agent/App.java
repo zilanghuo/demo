@@ -10,6 +10,7 @@ public class App {
 
     public static void premain(String agentOps, Instrumentation inst) {
         System.out.println("=========premain start========");
+        // 注册ClassFileTransformer
         inst.addTransformer(new FirstAgent());
     }
 
