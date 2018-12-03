@@ -26,6 +26,7 @@
         <module>netty</module>
         <module>log</module>
         <module>apm-agent</module>
+        <module>queue</module>
     </modules>
 
 
