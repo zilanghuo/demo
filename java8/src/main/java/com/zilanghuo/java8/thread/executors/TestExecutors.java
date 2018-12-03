@@ -3,10 +3,7 @@ package com.zilanghuo.java8.thread.executors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.concurrent.SynchronousQueue;
-import java.util.concurrent.ThreadFactory;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -23,12 +20,13 @@ public class TestExecutors {
     }
 
     public static void executorBeanFactory() {
-        ThreadPoolExecutor executor = new ThreadPoolExecutor(0, Integer.MAX_VALUE,
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(2, 2,
                 60L, TimeUnit.SECONDS,
-                new SynchronousQueue(), new UserThreadFactory());
-        for (int i = 0; i < 50; i++) {
+                new LinkedBlockingDeque(4), new UserThreadFactory(),new ThreadPoolExecutor.CallerRunsPolicy());
+        for (int i = 0; i < 100; i++) {
+            int finalI = i;
             executor.execute(() ->
-                    logger.info("----"));
+                    logger.info("----"+ finalI));
 
         }
     }
@@ -39,7 +37,7 @@ public class TestExecutors {
  * 线程工厂名称
  */
 class UserThreadFactory implements ThreadFactory {
-    private final AtomicInteger nextId = new AtomicInteger(1);
+    private final AtomicInteger nextId = new AtomicInteger(0);
     @Override
     public Thread newThread(Runnable task) {
         String name = "test-" + nextId.incrementAndGet() + Thread.currentThread().getName();

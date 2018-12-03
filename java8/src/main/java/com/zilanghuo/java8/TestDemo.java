@@ -1,6 +1,7 @@
 package com.zilanghuo.java8;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -10,13 +11,17 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @date 2018/10/31
  * use:
  */
-public class ListDemo {
+public class TestDemo {
+
+    @org.junit.Test
+    public void stringAt(){
+        Calendar calendar = Calendar.getInstance();
+
+    }
+
 
     @org.junit.Test
     public void copyOnWriteArrayList() {
-
-
-
         System.out.println(Integer.SIZE - 3);
         System.out.println(-1 << 2);
         List<Long> arrayList = new ArrayList();
@@ -35,9 +40,7 @@ public class ListDemo {
         }
         // 52130161129
         System.out.println("copyOnWriteArrayList cost:" + (System.currentTimeMillis() - start2));
-
     }
-
 
     @org.junit.Test
     public void subListFailFast() {
