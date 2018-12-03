@@ -125,7 +125,8 @@ public class RabbitMQConfig {
         container.setExposeListenerChannel(true);
         container.setMaxConcurrentConsumers(1);
         container.setConcurrentConsumers(1);
-        container.setAcknowledgeMode(AcknowledgeMode.MANUAL); //设置确认模式手工确认
+        //设置确认模式手工确认
+        container.setAcknowledgeMode(AcknowledgeMode.MANUAL);
         container.setMessageListener((ChannelAwareMessageListener) (message, channel) -> {
             byte[] body = message.getBody();
             System.out.println("收到消息 : " + new String(body));
@@ -149,17 +150,11 @@ public class RabbitMQConfig {
         container.setMaxConcurrentConsumers(1);
         container.setConcurrentConsumers(1);
         container.setAcknowledgeMode(AcknowledgeMode.MANUAL); //设置确认模式手工确认
-        container.setMessageListener(new ChannelAwareMessageListener() {
-
-            @Override
-            public void onMessage(Message message, com.rabbitmq.client.Channel channel) throws Exception {
-                byte[] body = message.getBody();
-                System.out.println("queue1 收到消息 : " + new String(body));
-                //确认消息成功消费
-                channel.basicAck(message.getMessageProperties().getDeliveryTag(), false);
-
-            }
-
+        container.setMessageListener((ChannelAwareMessageListener) (message, channel) -> {
+            byte[] body = message.getBody();
+            System.out.println("queue1 收到消息 : " + new String(body));
+            //确认消息成功消费
+            channel.basicAck(message.getMessageProperties().getDeliveryTag(), false);
         });
         return container;
     }
