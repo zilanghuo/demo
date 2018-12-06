@@ -31,9 +31,7 @@ public class ParameterConfig {
     @Value("${virtualHost}")
     private String virtualHost;
 
-    @PostConstruct
-    public void after(){
-        System.out.println("----------------after");
-    }
+    @Value("${queueName}")
+    private String queueName;
 
 }

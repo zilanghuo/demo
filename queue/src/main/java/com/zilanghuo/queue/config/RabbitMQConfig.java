@@ -98,7 +98,6 @@ public class RabbitMQConfig {
     public Queue queue1() {
         //队列持久
         return new Queue("queue_one1", true);
-
     }
 
     /**
@@ -118,7 +117,7 @@ public class RabbitMQConfig {
      *
      * @return
      */
-   /* @Bean
+/*    @Bean
     public SimpleMessageListenerContainer messageContainer() {
         SimpleMessageListenerContainer container = new SimpleMessageListenerContainer(connectionFactory());
         container.setQueues(queue());
@@ -130,6 +129,7 @@ public class RabbitMQConfig {
         container.setMessageListener((ChannelAwareMessageListener) (message, channel) -> {
             byte[] body = message.getBody();
             System.out.println("收到消息 : " + new String(body));
+
             channel.basicAck(message.getMessageProperties().getDeliveryTag(), false); //确认消息成功消费
 
         });
