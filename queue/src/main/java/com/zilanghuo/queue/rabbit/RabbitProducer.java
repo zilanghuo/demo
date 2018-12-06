@@ -2,7 +2,6 @@ package com.zilanghuo.queue.rabbit;
 
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 /**
@@ -18,6 +17,6 @@ public class RabbitProducer {
 
     public void send(String message) {
         System.out.println("send message:" + message);
-        rabbitTemplate.convertAndSend("queue_one",message);
+        rabbitTemplate.convertAndSend("queue_one", message);
     }
 }

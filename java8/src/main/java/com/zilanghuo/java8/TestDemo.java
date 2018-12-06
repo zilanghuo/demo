@@ -1,7 +1,9 @@
 package com.zilanghuo.java8;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -15,7 +17,14 @@ public class TestDemo {
 
     @org.junit.Test
     public void stringAt(){
-        Calendar calendar = Calendar.getInstance();
+        Date date = new Date(1543852800000L);
+        SimpleDateFormat format0 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String time = format0.format(date.getTime());//这个就是把时间戳经过处理得到期望格式的时间
+        System.out.println("格式化结果0：" + time);
+
+        Date date2 = new Date(1543939199999L);
+        String time2 = format0.format(date2.getTime());//这个就是把时间戳经过处理得到期望格式的时间
+        System.out.println("格式化结果0：" + time2);
 
     }
 

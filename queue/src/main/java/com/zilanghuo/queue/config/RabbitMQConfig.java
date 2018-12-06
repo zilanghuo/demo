@@ -118,7 +118,7 @@ public class RabbitMQConfig {
      *
      * @return
      */
-    @Bean
+   /* @Bean
     public SimpleMessageListenerContainer messageContainer() {
         SimpleMessageListenerContainer container = new SimpleMessageListenerContainer(connectionFactory());
         container.setQueues(queue());
@@ -134,7 +134,7 @@ public class RabbitMQConfig {
 
         });
         return container;
-    }
+    }*/
 
     /**
      * 接受消息的监听，这个监听会接受消息队列1的消息
@@ -142,7 +142,7 @@ public class RabbitMQConfig {
      *
      * @return
      */
-    @Bean
+   /* @Bean
     public SimpleMessageListenerContainer messageContainer2() {
         SimpleMessageListenerContainer container = new SimpleMessageListenerContainer(connectionFactory());
         container.setQueues(queue1());
@@ -157,7 +157,7 @@ public class RabbitMQConfig {
             channel.basicAck(message.getMessageProperties().getDeliveryTag(), false);
         });
         return container;
-    }
+    }*/
 
 
 }
