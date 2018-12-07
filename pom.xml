@@ -27,6 +27,7 @@
         <module>log</module>
         <module>apm-agent</module>
         <module>queue</module>
+        <module>queue-code</module>
     </modules>
 
 
