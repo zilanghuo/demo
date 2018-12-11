@@ -1,10 +1,7 @@
 package com.zilanghuo.java8;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -14,6 +11,12 @@ import java.util.concurrent.atomic.AtomicInteger;
  * use:
  */
 public class TestDemo {
+
+    @org.junit.Test
+    public void test(){
+        UUID uuid = UUID.randomUUID();
+        System.out.println(uuid.toString().replace("-",""));
+    }
 
     @org.junit.Test
     public void stringAt(){
