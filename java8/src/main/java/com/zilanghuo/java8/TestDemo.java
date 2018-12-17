@@ -20,14 +20,11 @@ public class TestDemo {
 
     @org.junit.Test
     public void stringAt(){
-        Date date = new Date(1543852800000L);
+        Date date = new Date(1544606580709L);
         SimpleDateFormat format0 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String time = format0.format(date.getTime());//这个就是把时间戳经过处理得到期望格式的时间
         System.out.println("格式化结果0：" + time);
 
-        Date date2 = new Date(1543939199999L);
-        String time2 = format0.format(date2.getTime());//这个就是把时间戳经过处理得到期望格式的时间
-        System.out.println("格式化结果0：" + time2);
 
     }
 
