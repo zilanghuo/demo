@@ -1,9 +1,16 @@
 package com.zilanghuo.java8;
 
+import cn.hutool.http.HttpUtil;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.Semaphore;
 
 /**
  * @author laiwufa
@@ -13,13 +20,42 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class TestDemo {
 
     @org.junit.Test
-    public void test(){
-        UUID uuid = UUID.randomUUID();
-        System.out.println(uuid.toString().replace("-",""));
+    public void test() {
+        String url = "https://zdpay.laocaibao.com/zdpay_cashier/notify/process";
+
+        Semaphore semaphore = new Semaphore(10);
+         Integer size = 0 ;
+        for (int i = 0; i < 10000; i++) {
+            try {
+                semaphore.acquire();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        String s = HttpUtil.get(url, 10000);
+                        System.out.println("----");
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        System.out.println("error" + e.getMessage());
+                    } finally {
+                        semaphore.release();
+                    }
+                }
+            }).start();
+        }
+
+        try {
+            Thread.sleep(5 * 1000);
+        } catch (InterruptedException e) {
+
+        }
     }
 
     @org.junit.Test
-    public void stringAt(){
+    public void stringAt() {
         Date date = new Date(1544606580709L);
         SimpleDateFormat format0 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String time = format0.format(date.getTime());//这个就是把时间戳经过处理得到期望格式的时间
@@ -79,4 +115,12 @@ public class TestDemo {
 
     }
 
+}
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+class People {
+
+    private String age;
 }
