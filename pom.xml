@@ -28,6 +28,7 @@
         <module>apm-agent</module>
         <module>queue</module>
         <module>queue-code</module>
+        <module>dubbo-test</module>
     </modules>
 
 
