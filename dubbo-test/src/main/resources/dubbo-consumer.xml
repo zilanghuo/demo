@@ -17,4 +17,8 @@
     <dubbo:reference id="dataCoreUserFacadeService"  protocol="dubbo" timeout="100000" registry="registry" url="dubbo://172.17.34.201:19094"
                      check="false" version="1.0.0" interface="com.zdmoney.data.core.api.facade.IDataCoreUserFacadeService"/>
 
+
+    <dubbo:reference id="dataAgentSafeFacadeService" protocol="dubbo" interface="com.zdmoney.data.agent.api.facade.IDataAgentSafeFacadeService"
+                     check="false" version="1.0.0" registry="registry" url="dubbo://172.17.34.4:18088" />
+
 </beans>
