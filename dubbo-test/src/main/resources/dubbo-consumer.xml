@@ -14,9 +14,7 @@
     <dubbo:registry id="registry" protocol="zookeeper"
                     address="172.17.34.121:2181,172.17.34.122:2181,172.17.34.123:2181" />
 
-    <dubbo:consumer  check="false" mock="true"/>
-
-    <dubbo:reference id="dataCoreUserFacadeService"  protocol="dubbo" timeout="100000" registry="registry"
+    <dubbo:reference id="dataCoreUserFacadeService"  protocol="dubbo" timeout="100000" registry="registry" url="dubbo://172.17.34.201:19094"
                      check="false" version="1.0.0" interface="com.zdmoney.data.core.api.facade.IDataCoreUserFacadeService"/>
 
 </beans>
