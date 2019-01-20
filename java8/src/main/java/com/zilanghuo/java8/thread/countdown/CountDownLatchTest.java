@@ -32,6 +32,7 @@ public class CountDownLatchTest {
 class TranslateThread extends Thread{
 
     private String content;
+
     private final CountDownLatch count;
 
     @Override

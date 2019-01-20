@@ -21,37 +21,11 @@ public class TestDemo {
 
     @org.junit.Test
     public void test() {
-        String url = "https://zdpay.laocaibao.com/zdpay_cashier/notify/process";
+        Integer a = 333;
+        Integer b = 333;
+        System.out.println(a == b);
+        System.out.println(a.intValue() == b.intValue());
 
-        Semaphore semaphore = new Semaphore(10);
-         Integer size = 0 ;
-        for (int i = 0; i < 10000; i++) {
-            try {
-                semaphore.acquire();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        String s = HttpUtil.get(url, 10000);
-                        System.out.println("----");
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                        System.out.println("error" + e.getMessage());
-                    } finally {
-                        semaphore.release();
-                    }
-                }
-            }).start();
-        }
-
-        try {
-            Thread.sleep(5 * 1000);
-        } catch (InterruptedException e) {
-
-        }
     }
 
     @org.junit.Test
