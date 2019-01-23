@@ -2,7 +2,7 @@ package com.zilanghuo.java8.thread;
 
 /**
  * @author Acer
- *  volatile 变量无法保证线程安全，只能保证内存可见性
+ * volatile 变量无法保证线程安全，只能保证内存可见性
  */
 public class VolatileAtomicAndSync {
 
@@ -14,7 +14,7 @@ public class VolatileAtomicAndSync {
         Thread subtractThread = new SubtractThread();
         subtractThread.start();
         for (int i = 0; i < NUMBER; i++) {
-            synchronized (VolatileAtomicAndSync.class){
+            synchronized (VolatileAtomicAndSync.class) {
                 count++;
             }
         }
@@ -27,7 +27,7 @@ public class VolatileAtomicAndSync {
         @Override
         public void run() {
             for (int i = 0; i < NUMBER; i++) {
-                synchronized (VolatileAtomicAndSync.class){
+                synchronized (VolatileAtomicAndSync.class) {
                     count--;
                 }
             }
