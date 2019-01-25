@@ -29,6 +29,7 @@
         <module>queue</module>
         <module>queue-code</module>
         <module>dubbo-test</module>
+        <module>web</module>
     </modules>
 
 

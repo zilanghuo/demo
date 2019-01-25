@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%date{[yyyy-MM-dd] HH:mm:ss.SSS} web-%X{traceId} [%thread]-[%file:%line]-[%level] %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+    <!--过滤掉spring和hibernate的一些无用的debug信息-->
+    <logger name="org.springframework" level="INFO"/>
+    <logger name="org.hibernate" level="INFO"/>
+    <!-- 过滤es日志，设置为ERROR -->
+    <logger name="org.elasticsearch" level="INFO"/>
+    <!-- 过滤kafka无用日志 -->
+    <logger name="org.apache.kafka.common.config" level="INFO"/>
+    <logger name="org.apache.kafka.clients" level="ERROR" />
+    <logger name="org.springframework.kafka" level="ERROR"/>
+    <logger name="org.springframework.kafka.listener" level="ERROR"/>
+    <root level="INFO">
+        <appender-ref ref="stdout"/>
+    </root>
+</configuration>
