@@ -28,10 +28,21 @@ public class TestThread {
             taskExecutor.execute(new Runnable() {
                 @Override
                 public void run() {
-                    log.info("--------");
+                    log.info("------");
                 }
             });
+
+          /* 重写runnable方式
+          taskExecutor.execute(new LcbTraceRunnable() {
+                @Override
+                public void concreteRun() {
+                    log.info("--------");
+                }
+            });*/
+        }
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
         }
     }
-
 }
