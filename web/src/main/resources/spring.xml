@@ -29,8 +29,8 @@
 
     <!-- 线程执行器配置-trace -->
     <bean id="traceTaskExecutor" class="com.zilanghuo.web.utils.TraceThreadPoolTaskExecutor">
-        <property name="corePoolSize" value="20"/>
-        <property name="maxPoolSize" value="1000"/>
+        <property name="corePoolSize" value="5"/>
+        <property name="maxPoolSize" value="5"/>
         <property name="queueCapacity" value="5000"/>
         <property name="rejectedExecutionHandler">
             <bean class="java.util.concurrent.ThreadPoolExecutor$DiscardPolicy"/>
