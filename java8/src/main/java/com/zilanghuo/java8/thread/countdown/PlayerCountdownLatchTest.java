@@ -28,7 +28,7 @@ public class PlayerCountdownLatchTest {
         System.out.println("race begin:");
         //线程都放入线程池，相当于初始化完毕，准备就绪
         begin.countDown();
-            // 只有当end为0时，宣布比赛结束
+        // 只有当end为0时，宣布比赛结束
         end.await();
         System.out.println("race end!");
         executorService.shutdown();
@@ -45,6 +45,7 @@ class Player implements Runnable {
         this.begin = begin;
         this.end = end;
     }
+
     @Override
     public void run() {
         try {

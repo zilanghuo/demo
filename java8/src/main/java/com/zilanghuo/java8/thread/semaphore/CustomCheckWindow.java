@@ -17,10 +17,12 @@ public class CustomCheckWindow {
 class SecurityCheckThread extends Thread {
     private int seq;
     private Semaphore semaphore;
+
     public SecurityCheckThread(int seq, Semaphore semaphore) {
         this.seq = seq;
         this.semaphore = semaphore;
     }
+
     @Override
     public void run() {
         try {

@@ -21,9 +21,11 @@ public class CyclicBarrierTest {
 
 class Write extends Thread {
     private CyclicBarrier cyclicBarrier;
+
     public Write(CyclicBarrier cyclicBarrier) {
         this.cyclicBarrier = cyclicBarrier;
     }
+
     @Override
     public void run() {
         System.out.println("thread no." + Thread.currentThread().getName() + " processing!");
