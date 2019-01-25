@@ -16,7 +16,7 @@ public class TraceThreadPoolTaskExecutor extends ThreadPoolTaskExecutor {
     public void execute(Runnable task) {
         Executor executor = getThreadPoolExecutor();
 
-        LcbTraceRunnable lcbTraceRunnable = new LcbTraceRunnable() {
+        TraceRunnable traceRunnable = new TraceRunnable() {
             @Override
             public void concreteRun() {
                 task.run();
@@ -24,7 +24,7 @@ public class TraceThreadPoolTaskExecutor extends ThreadPoolTaskExecutor {
         };
 
         try {
-            executor.execute(lcbTraceRunnable);
+            executor.execute(traceRunnable);
         } catch (RejectedExecutionException ex) {
             throw new TaskRejectedException("Executor [" + executor + "] did not accept task: " + task, ex);
         }

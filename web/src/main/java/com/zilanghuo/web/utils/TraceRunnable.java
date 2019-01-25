@@ -8,7 +8,7 @@ import java.util.UUID;
  * @author laiwufa
  * @date 2019/1/25
  */
-public abstract class LcbTraceRunnable implements Runnable {
+public abstract class TraceRunnable implements Runnable {
 
     /**
      * 具体的内部实现

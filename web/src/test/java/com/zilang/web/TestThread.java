@@ -37,7 +37,7 @@ public class TestThread {
             });
 
           /* 重写runnable方式
-          taskExecutor.execute(new LcbTraceRunnable() {
+          taskExecutor.execute(new TraceRunnable() {
                 @Override
                 public void concreteRun() {
                     log.info("--------");
