@@ -1,16 +1,15 @@
 package com.zilanghuo.java8;
 
-import cn.hutool.http.HttpUtil;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.junit.Test;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.concurrent.Semaphore;
 
 /**
  * @author laiwufa
@@ -18,6 +17,19 @@ import java.util.concurrent.Semaphore;
  * use:
  */
 public class TestDemo {
+
+    @Test
+    public void testHashCode() {
+        String s = "OK";
+        StringBuffer sb = new StringBuffer(s);
+        System.out.println(s.hashCode() + " " + sb.hashCode());
+
+        String b = "OK";
+        StringBuffer tb = new StringBuffer(b);
+        System.out.println(s.hashCode() + " " + tb.hashCode());
+
+
+    }
 
     @org.junit.Test
     public void test() {
