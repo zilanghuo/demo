@@ -20,17 +20,34 @@ public class TestExecutors {
     }
 
     public static void executorBeanFactory() {
-        ThreadPoolExecutor executor = new ThreadPoolExecutor(2, 2,
+        CountDownLatch downLatch = new CountDownLatch(100);
+
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(10, 10,
                 60L, TimeUnit.SECONDS,
-                new LinkedBlockingDeque(4), new UserThreadFactory(),new ThreadPoolExecutor.CallerRunsPolicy());
-        for (int i = 0; i < 100; i++) {
+                new LinkedBlockingDeque(200), new UserThreadFactory(), new ThreadPoolExecutor.CallerRunsPolicy());
+        for (int i = 1; i <= 100; i++) {
             int finalI = i;
-            executor.execute(() ->
-                    logger.info("----"+ finalI));
+            executor.execute(() -> {
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+
+                }
+                logger.info("----" + finalI);
+                downLatch.countDown();
+            });
 
         }
-    }
+        //测试shutdown，是否等待对了执行完毕
+        executor.shutdown();
+        try {
+            downLatch.await();
+        } catch (InterruptedException e) {
 
+        }
+        logger.info("执行完毕！");
+
+    }
 }
 
 /**
@@ -38,6 +55,7 @@ public class TestExecutors {
  */
 class UserThreadFactory implements ThreadFactory {
     private final AtomicInteger nextId = new AtomicInteger(0);
+
     @Override
     public Thread newThread(Runnable task) {
         String name = "test-" + nextId.incrementAndGet() + Thread.currentThread().getName();
