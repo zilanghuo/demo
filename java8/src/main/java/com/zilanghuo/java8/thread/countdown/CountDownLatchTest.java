@@ -21,7 +21,7 @@ public class CountDownLatchTest {
         thread1.start();
         thread2.start();
         thread3.start();
-        count.await(10,TimeUnit.SECONDS);
+        count.await(10,TimeUnit.MILLISECONDS);
         System.out.println("线程执行完毕。");
     }
 
@@ -38,7 +38,12 @@ class TranslateThread extends Thread{
     @Override
     public void run(){
         if (Math.random() > 0.5){
-            throw new RuntimeException("非法字符串");
+            System.out.println("非法字符串");
+        }
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
         System.out.println(content+"的译文。。。。");
         count.countDown();
