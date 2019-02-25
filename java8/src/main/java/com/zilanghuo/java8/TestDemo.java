@@ -8,6 +8,7 @@ import org.junit.Test;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -19,16 +20,42 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class TestDemo {
 
     @Test
+    public void testList() throws Exception{
+        List<String> list = new ArrayList(4);
+        list.add("1");
+        list.add("1");
+        list.add("1");
+        list.add("1");
+        System.out.println(list.size());
+        Iterator<String> iterator = list.iterator();
+        while (iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
+
+        Iterator<String> iterator1 = list.iterator();
+        while (iterator1.hasNext()){
+            System.out.println(iterator1.next());
+        }
+
+
+    }
+
+    @Test
+    public void testDate() throws Exception{
+        Date startDate = new Date();
+        Thread.sleep(2000);
+        Date endDate = new Date();
+        System.out.println(startDate.before(endDate));
+    }
+
+    @Test
     public void testHashCode() {
         String s = "OK";
         StringBuffer sb = new StringBuffer(s);
         System.out.println(s.hashCode() + " " + sb.hashCode());
-
         String b = "OK";
         StringBuffer tb = new StringBuffer(b);
         System.out.println(s.hashCode() + " " + tb.hashCode());
-
-
     }
 
     @org.junit.Test

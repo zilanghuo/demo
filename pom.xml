@@ -30,6 +30,7 @@
         <module>queue-code</module>
         <module>dubbo-test</module>
         <module>web</module>
+        <module>zk</module>
     </modules>
 
 
