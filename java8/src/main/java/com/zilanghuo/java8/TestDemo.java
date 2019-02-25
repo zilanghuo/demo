@@ -59,6 +59,24 @@ public class TestDemo {
     }
 
     @org.junit.Test
+    public void testLong() {
+        int num = 2147483647;
+        long temp = num + 2L;
+        System.out.println("long:" + num);
+        System.out.println("long temp:" + temp);
+
+
+    }
+
+    @org.junit.Test
+    public void testInt() {
+        int num = 68;
+        char c = (char) num;
+        System.out.println(c);
+        System.out.println((int) 'A');
+    }
+
+    @org.junit.Test
     public void test() {
         Integer a = 333;
         Integer b = 333;
@@ -73,8 +91,6 @@ public class TestDemo {
         SimpleDateFormat format0 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String time = format0.format(date.getTime());//这个就是把时间戳经过处理得到期望格式的时间
         System.out.println("格式化结果0：" + time);
-
-
     }
 
 
