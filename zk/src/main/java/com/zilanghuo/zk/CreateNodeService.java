@@ -13,17 +13,14 @@ public class CreateNodeService {
         String ip = "172.17.34.121:2181";
         ZooKeeper zk = new ZooKeeper(ip, 1000, new CreateWatcher());
         for (int i = 0; i < 10; i++) {
-//            createNode(zk,"/local/persistentSeq", CreateMode.PERSISTENT_SEQUENTIAL);
+           createNode(zk,"/local/persistentSeq", CreateMode.PERSISTENT_SEQUENTIAL);
         }
         for (int i = 0; i < 2; i++) {
-            createNode(zk, "/local/ephemeralSequential", CreateMode.EPHEMERAL);
+ //           createNode(zk, "/local/ephemeralSequential", CreateMode.EPHEMERAL);
         }
-
         Thread.sleep(1000 * 2); // 等待20秒关闭ZooKeeper连接
         zk.close(); // 关闭连接后创建的临时节点将自动删除
-
     }
-
 
     private static void createNode(ZooKeeper zk, String path, CreateMode ephemeralSequential) throws KeeperException, InterruptedException {
         String createdPath = zk.create(path, path.getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, ephemeralSequential);
