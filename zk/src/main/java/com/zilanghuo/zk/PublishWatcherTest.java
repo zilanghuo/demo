@@ -23,28 +23,6 @@ public class PublishWatcherTest {
     static final int timeout = 10000;
     static CountDownLatch countDownLatch = new CountDownLatch(1);
 
-    // 客户端的监听配置
-    static ConnectionStateListener clientListener = new ConnectionStateListener() {
-
-        @Override
-        public void stateChanged(CuratorFramework client, ConnectionState newState) {
-            if (newState == ConnectionState.CONNECTED) {
-                System.out.println("connected established");
-                countDownLatch.countDown();
-            } else if (newState == ConnectionState.LOST) {
-                System.out.println("connection lost,waiting for reconection");
-                try {
-                    System.out.println("reinit---");
-                    reinit();
-                    System.out.println("inited---");
-                } catch (Exception e) {
-                    System.out.println("re-inited failed");
-                }
-            }
-
-        }
-    };
-
 
     /**
      * 初始化，增加客户端监听器
@@ -54,12 +32,15 @@ public class PublishWatcherTest {
         client = CuratorFrameworkFactory.builder().connectString(zkAddress)
                 .sessionTimeoutMs(timeout).retryPolicy(new RetryNTimes(5, 5000)).build();
         // 客户端注册监听，进行连接配置
-        client.getConnectionStateListenable().addListener(clientListener);
+        client.getConnectionStateListenable().addListener(new ClientConnectionStateListener());
         client.start();
         // 连接成功后，才进行下一步的操作
         countDownLatch.await();
     }
 
+    /**
+     * 重新初始化
+     */
     public static void reinit() {
         try {
             unregister();
@@ -69,6 +50,9 @@ public class PublishWatcherTest {
         }
     }
 
+    /**
+     * 关闭连接
+     */
     public static void unregister() {
         try {
             if (client != null) {
@@ -93,10 +77,39 @@ public class PublishWatcherTest {
 
     }
 
+    public static void main(String[] args) throws Exception {
+        init();
+        watcherPath(PATH, new NodeWatcher());
+        Thread.sleep(Integer.MAX_VALUE);
+    }
+
+
     /**
-     * 创建path监听器
+     * 创建客户端监听器
      */
-    static CuratorWatcher pathWatcher = new CuratorWatcher() {
+    static class ClientConnectionStateListener implements ConnectionStateListener {
+        @Override
+        public void stateChanged(CuratorFramework client, ConnectionState newState) {
+            if (newState == ConnectionState.CONNECTED) {
+                System.out.println("connected established");
+                countDownLatch.countDown();
+            } else if (newState == ConnectionState.LOST) {
+                System.out.println("connection lost,waiting for reconection");
+                try {
+                    System.out.println("reinit---");
+                    reinit();
+                    System.out.println("inited---");
+                } catch (Exception e) {
+                    System.out.println("re-inited failed");
+                }
+            }
+        }
+    }
+
+    /**
+     * 创建节点监听器
+     */
+    static class NodeWatcher implements CuratorWatcher{
 
         @Override
         public void process(WatchedEvent event) throws Exception {
@@ -106,14 +119,6 @@ public class PublishWatcherTest {
                 String value = readPath(event.getPath());
                 System.out.println(value);
             }
-
         }
-    };
-
-
-    public static void main(String[] args) throws Exception {
-        init();
-        watcherPath(PATH, pathWatcher);
-        Thread.sleep(Integer.MAX_VALUE);
     }
 }
