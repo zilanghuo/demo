@@ -19,10 +19,6 @@ import java.util.List;
  */
 public class Java2ExcelConvert {
 
-    public static void main(String[] args) {
-
-    }
-
     public static void writeWithoutHead(DataResult result) throws IOException {
         try (OutputStream out = new FileOutputStream("E:\\2007.xls");) {
             ExcelWriter writer = new ExcelWriter(out, ExcelTypeEnum.XLS, false);
@@ -33,12 +29,18 @@ public class Java2ExcelConvert {
             List<ServiceResult> slowServiceList = totalResult.getGetTopNSlowService();
             for (int i = 0; i < slowServiceList.size(); i++) {
                 List<Object> item = new ArrayList<>();
+                if (i == 0) {
+                    List<Object> headItem = new ArrayList<>();
+                    headItem.add("系统名");
+                    headItem.add("服务名");
+                    headItem.add("耗时(ms)");
+                    data.add(headItem);
+                }
                 item.add(slowServiceList.get(i).getService().getApplicationName());
                 item.add(slowServiceList.get(i).getService().getLabel());
                 item.add(slowServiceList.get(i).getValue() + "");
                 data.add(item);
             }
-
             writer.write1(data, sheet1);
             writer.finish();
         }
