@@ -9,7 +9,8 @@ import java.io.IOException;
  * @author laiwufa
  * @date 2019/3/4 0004 下午 2:15
  */
-public class HttpClientUtils {
+public class SkyHttpClientUtils {
+
     public final static String ENDPOINT = "http://10.100.60.84:8080/api/dashboard";
 
     public static void main(String[] args) throws Exception {
