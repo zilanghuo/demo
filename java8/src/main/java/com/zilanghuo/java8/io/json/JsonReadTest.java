@@ -1,11 +1,13 @@
 package com.zilanghuo.java8.io.json;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import lombok.Data;
 
-import java.io.*;
-import java.util.List;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.Reader;
+
+import static com.zilanghuo.java8.io.excel.Java2ExcelConvert.writeWithoutHead;
 
 /**
  * @author laiwufa
@@ -14,15 +16,16 @@ import java.util.List;
 public class JsonReadTest {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         String s = readFileByChars("E:\\json.txt");
         System.out.println(s);
         convertJson2Bean(s);
+        writeWithoutHead(convertJson2Bean(s));
     }
 
-    public static Result convertJson2Bean(String s) {
+    public static DataResult convertJson2Bean(String s) {
         JSONObject jsonObject = JSONObject.parseObject(s);
-        Result result = jsonObject.toJavaObject(Result.class);
+        DataResult result = jsonObject.toJavaObject(DataResult.class);
         return result;
     }
 
@@ -71,44 +74,4 @@ public class JsonReadTest {
 
 }
 
-@Data
-class Result implements Serializable {
-
-    private static final long serialVersionUID = -3273974193806726050L;
-
-    public TotalResult data;
-
-}
-
-@Data
-class TotalResult implements Serializable {
-    private static final long serialVersionUID = 345689637100345171L;
-
-    public List<ServiceResult> getTopNSlowService;
-
-}
-
-@Data
-class ServiceResult implements Serializable {
-    private static final long serialVersionUID = -5000911391300900536L;
-
-    public ServiceBean service;
-
-    public Long value;
-
-}
-
-@Data
-class ServiceBean implements Serializable {
-
-    private static final long serialVersionUID = -4355458906767416434L;
-
-    public String key;
-
-    public String label;
-
-    public String applicationId;
-
-    public String applicationName;
-}
 
