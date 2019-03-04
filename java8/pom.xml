@@ -14,6 +14,12 @@
 
     <dependencies>
 
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.55</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-core -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
@@ -54,11 +60,11 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.restlet/org.restlet -->
-        <dependency>
+    <!--    <dependency>
             <groupId>org.restlet</groupId>
             <artifactId>org.restlet</artifactId>
             <version>1.1.10</version>
-        </dependency>
+        </dependency>-->
 
 
     </dependencies>
