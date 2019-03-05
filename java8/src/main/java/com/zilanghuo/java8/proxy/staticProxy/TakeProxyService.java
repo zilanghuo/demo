@@ -14,6 +14,7 @@ public class TakeProxyService implements ITakeService {
     TakeProxyService(ITakeService takeService){
         this.takeService = takeService;
     }
+
     @Override
     public void sayHello() {
         System.out.println("这是代理方法");
