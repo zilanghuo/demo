@@ -1,7 +1,5 @@
 package com.zilanghuo.test;
 
-import java.util.List;
-
 /**
  * @author laiwufa
  * @date 2019/3/14 0014 下午 3:43
@@ -9,21 +7,15 @@ import java.util.List;
 public class Test {
 
     public static void main(String[] args) {
-        int totalSize = 2345;
-        int pageSize = 1000;
-        int retNum = totalSize / pageSize;
-        int modNum = totalSize % pageSize;
-        int times = retNum + (modNum > 0 ? 1 : 0);    //发送次数
+        String a = new String("aa");
+        String b = new String("aa");
+        System.out.println(a == b);
 
-        for (int groupNo = 0; groupNo < times; groupNo++) {
-            System.out.println("-------------");
-
-        }
-
-
-
-
-
+        String a1 = "cc";
+        String b1 = "cc";
+        String c1 = new String("cc");
+        System.out.println(a1 == b1);
+        System.out.println(a1 == c1);
 
     }
 
