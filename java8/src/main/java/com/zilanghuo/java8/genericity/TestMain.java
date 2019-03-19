@@ -20,7 +20,6 @@ public class TestMain {
         carField.add(new CarField());
         // extends\super
 
-        // List<? extends Cat> extendsCatForAnimal = animal;
         List<? super Cat> superCatForAnimal = animal;
 
         List<? extends Cat> extendsCatForCat = cat;

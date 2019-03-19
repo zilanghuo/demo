@@ -10,16 +10,36 @@ public class TestExecutorFuture {
 
     public static void main(String[] args) throws Exception {
 
-        ThreadPoolExecutor executor = new ThreadPoolExecutor(2, 2,
-                60L, TimeUnit.SECONDS, new LinkedBlockingDeque(4));
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(2, 2,60L, TimeUnit.SECONDS, new LinkedBlockingDeque(4));
 
-        Callable myCallable = () -> {
-            Thread.sleep(3000);
-            System.out.println("calld方法执行了");
-            return "call方法返回值";
-        };
-        Future future = executor.submit(myCallable);
-        System.out.println("返回结果：" + future.get());
+        Future future = executor.submit(new TestCallable());
+        try {
+            System.out.println("返回结果：" + future.get(4,TimeUnit.SECONDS));
+        }catch (Exception e){
+            future.cancel(true);
+        }
+        Future<?> submit = executor.submit(new TestRunnable());
+        System.out.println(submit.get()+"---");
+
+    }
+
+    static class TestCallable implements Callable<String> {
+
+        @Override
+        public String call() throws Exception {
+            System.out.println("执行结果中--------------");
+            // int a = 1/0;
+            return "未超时结果";
+        }
+    }
+
+    static class TestRunnable implements Runnable{
+
+        @Override
+        public void run() {
+            int a =  1/0;
+        }
     }
 
 }
+
