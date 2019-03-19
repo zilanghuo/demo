@@ -1,7 +1,5 @@
 package com.zilanghuo.java8.design.template;
 
-import com.zilanghuo.java8.design.observe.Test;
-
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
