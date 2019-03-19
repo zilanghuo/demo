@@ -20,6 +20,12 @@ class Cat extends AbstractAnimalFactory {
 
     @Override
     public void eatMethod() {
+        try {
+            Thread.sleep(3 * 1000);
+            System.out.println("具体的吃方法");
+        } catch (InterruptedException e) {
+            System.out.println(e.getMessage());
+        }
         System.out.println("this is a cat!");
     }
 }
