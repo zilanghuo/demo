@@ -1,13 +1,38 @@
 package com.zilanghuo.java8.arithmetic;
 
+import cn.hutool.json.JSONUtil;
+
 /**
  * 算法
  */
 public class arithmeticDemo {
     public static void main(String[] args) {
-        thirdCountSame();
+        resortArray();
     }
 
+    /**
+     * 题目：
+     * 1、有一个数值型数组，将奇数放入左边，偶数放入右边，并且最近的偶数是哪一个
+     * 2、空间复杂度：1，时间复杂度O(n)
+     */
+    static void resortArray() {
+        int[] arr = new int[]{23, 54, 4, 3, 76, 45, 34, 87, 77, 4};
+        int[] newArr = new int[10];
+        int jIndex = 0;
+        int oIndex = arr.length - 1;
+        System.out.println("pre:" + JSONUtil.toJsonStr(arr));
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 == 0) {
+                newArr[oIndex] = arr[i];
+                oIndex--;
+            } else {
+                newArr[jIndex] = arr[i];
+                jIndex++;
+            }
+        }
+        System.out.println("first even index:" + (oIndex + 1));
+        System.out.println("sort:" + JSONUtil.toJsonStr(newArr));
+    }
 
     /**
      * 题目：
