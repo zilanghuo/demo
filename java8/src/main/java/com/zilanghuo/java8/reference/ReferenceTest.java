@@ -20,6 +20,18 @@ public class ReferenceTest {
         System.out.println("pre:" + array[0]);
         swapRefer(array);
         System.out.println("after:" + array[0]);
+        // StringBuffer 部分
+        StringBuffer sb1 = new StringBuffer("A");
+        StringBuffer sb2 = new StringBuffer("B");
+        operator(sb1, sb2);
+        System.out.println(sb1 + "," + sb2); // AB,B
+
+    }
+
+    // 修改的是sb1，sb2引用地址的值
+    static void operator(StringBuffer x, StringBuffer y) {
+        x.append(y);
+        y = x;
     }
 
     /**
