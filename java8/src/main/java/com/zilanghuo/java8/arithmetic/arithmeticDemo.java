@@ -6,8 +6,33 @@ import cn.hutool.json.JSONUtil;
  * 算法
  */
 public class arithmeticDemo {
+
     public static void main(String[] args) {
-        resortArray();
+        char[] arr = new char[]{'3', '5', '7'};
+        combination(arr, 0, arr.length);
+    }
+
+
+    /**
+     * 题目：
+     * 1、针对数组中的元素，输出全部组装的个数，不在乎顺序
+     * 2、枚举一个数组中所有组合
+     */
+    static void combination(char[] arr, int start, int end) {
+        if (start == end) {
+            System.out.println(new String(arr));
+        }
+        for (int i = start; i < arr.length; i++) {
+            char temp = arr[start];//交换数组第一个元素与后续的元素
+            arr[start] = arr[i];
+            // 固定当前的值
+            arr[i] = temp;
+            combination(arr, start + 1, arr.length);
+            temp = arr[start];//将交换后的数组还原
+            arr[start] = arr[i];
+            arr[i] = temp;
+        }
+
     }
 
     /**
