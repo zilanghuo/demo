@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class TestLogMdc {
 
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
 
         Logger logger = LoggerFactory.getLogger("TestLogMdc");
         // 初始化mdc的值

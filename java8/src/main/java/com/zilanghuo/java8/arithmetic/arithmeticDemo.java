@@ -2,16 +2,43 @@ package com.zilanghuo.java8.arithmetic;
 
 import cn.hutool.json.JSONUtil;
 
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
 /**
  * 算法
  */
 public class arithmeticDemo {
 
     public static void main(String[] args) {
-        char[] arr = new char[]{'3', '5', '7'};
-        combination(arr, 0, arr.length);
+        getFrequency("hello world aaaaaaaaaaa");
     }
 
+    /**
+     * 针对一个字符串，获取其频率最高的字符及其出现的第一个位置
+     *
+     * @param str
+     */
+    static void getFrequency(String str) {
+        char[] arr = str.toCharArray();
+        Map<Character, Integer> treeMap = new HashMap();
+        for (int i = 0; i < arr.length; i++) {
+            int size = treeMap.get(arr[i]) == null ? 0 : treeMap.get(arr[i]);
+            treeMap.put(arr[i], size + 1);
+        }
+        Iterator<Map.Entry<Character, Integer>> iterator = treeMap.entrySet().iterator();
+        int maxSize = 0;
+        Character maxChar = new Character('c');
+        while (iterator.hasNext()) {
+            Map.Entry<Character, Integer> next = iterator.next();
+            if (next.getValue() > maxSize) {
+                maxSize = next.getValue();
+                maxChar = next.getKey();
+            }
+        }
+        System.out.println(maxChar + ":" + maxSize);
+    }
 
     /**
      * 题目：
