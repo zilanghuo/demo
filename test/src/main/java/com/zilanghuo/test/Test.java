@@ -7,16 +7,25 @@ package com.zilanghuo.test;
 public class Test {
 
     public static void main(String[] args) {
-        String a = new String("aa");
-        String b = new String("aa");
-        System.out.println(a == b);
+        System.out.println(test());
+    }
 
-        String a1 = "cc";
-        String b1 = "cc";
-        String c1 = new String("cc");
-        System.out.println(a1 == b1);
-        System.out.println(a1 == c1);
+    static int test() {
+        int i = 0 ;
+        try {
+            return i;
+        } catch (Exception e) {
+            return -1;
+        } finally {
+            i++;
+        }
+    }
 
+    void getOne(){
+        return;
+    }
+
+    static void a(){
     }
 
 }
