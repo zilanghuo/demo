@@ -13,7 +13,7 @@ import java.util.List;
  -XX:+HeapDumpOnOutOfMemoryError
  -XX:HeapDumpPath=H:\
  */
-public class TestOutOfMemory {
+public class OutOfMemoryDemo {
 
     public static void main(String[] args) {
 
