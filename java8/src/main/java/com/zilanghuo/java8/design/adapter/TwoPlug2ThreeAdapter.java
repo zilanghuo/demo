@@ -7,6 +7,9 @@ package com.zilanghuo.java8.design.adapter;
  */
 public class TwoPlug2ThreeAdapter implements ThreePlug {
 
+    /**
+     * 被适配者
+     */
     private TwoPlug twoPlug;
 
     TwoPlug2ThreeAdapter(TwoPlug twoPlug){
