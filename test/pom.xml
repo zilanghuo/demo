@@ -11,5 +11,12 @@
 
     <artifactId>test</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>4.5.1</version>
+        </dependency>
+    </dependencies>
 
 </project>
