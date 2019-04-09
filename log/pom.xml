@@ -11,6 +11,12 @@
 
     <artifactId>log</artifactId>
 
+    <properties>
+        <java.version>1.8</java.version>
+        <slf4j.version>1.7.25</slf4j.version>
+        <logback.version>1.2.3</logback.version>
+    </properties>
+
     <dependencies>
         <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-core -->
         <dependency>
