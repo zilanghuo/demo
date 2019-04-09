@@ -40,7 +40,7 @@ public class Health {
     @ResponseBody
     public String test() {
         for (int i = 0; i < 10; i++) {
-            readService.read();
+            readService.write();
         }
         return "ok";
     }

@@ -14,17 +14,18 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @author laiwufa
  * @date 2019/4/9 0009 上午 10:03
  */
-public class HealthTest extends BaseSpringBootTest{
+public class HealthTest extends LcbTestApplicationTests{
 
     @Autowired
     protected WebApplicationContext wac;
 
     @Test
-    public void test1() throws Exception {
+    public void test() throws Exception {
         RequestBuilder request = null;
         request = post("/test");
         mvc.perform(request)
                 .andDo(MockMvcResultHandlers.print())
                 .andExpect(content().string("ok"));
+        Thread.sleep(3 * 1000);
     }
 }
