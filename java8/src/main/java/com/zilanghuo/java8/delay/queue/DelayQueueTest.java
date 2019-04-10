@@ -27,11 +27,11 @@ public class DelayQueueTest {
             public void run() {
                 System.out.println("开始消费数据：");
                 while (true) {
-                    try {
+                    /*try {
                         DelayQueueElement take = delayQueue.take();
                         System.out.println("当前时间：" + DateUtil.formatTime(new Date()) + ",创建对象：" + take.toString());
                     } catch (InterruptedException e) {
-                    }
+                    }*/
                 }
             }
         }).start();
@@ -45,10 +45,10 @@ public class DelayQueueTest {
                 System.out.println("开始生产数据：");
                 while (true) {
                     try {
-                        Thread.sleep(500);
+                        Thread.sleep(5000);
                     } catch (InterruptedException e) {
                     }
-                    DelayQueueElement element = new DelayQueueElement(2000, "hello" + i[0]);
+                    DelayQueueElement element = new DelayQueueElement(5000, "hello" + i[0]);
                     delayQueue.offer(element);
                     System.out.println("当前时间：" + DateUtil.formatTime(new Date()) + ",创建对象：" + element.getMsg() + ",延时：" + element.getDelay());
                     i[0]++;
