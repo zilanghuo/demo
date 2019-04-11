@@ -2,7 +2,7 @@ package com.zilanghuo.test;
 
 public class People {
 
-    static  int age = 10;
+    public   int age = 10;
 
     void get() {
         System.out.println("hello");

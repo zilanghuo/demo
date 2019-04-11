@@ -2,8 +2,11 @@ package com.zilanghuo.test;
 
 public class Student extends People {
 
-    public static void main(String[] args) {
+    public   int age = 20;
 
+    public static void main(String[] args) {
+        System.out.println(new Student().age);
+        System.out.println();
 
 
     }
