@@ -3,7 +3,7 @@ package com.zilanghuo.java8.di.diDemo;
 /**
  * @author laiwufa
  * @date 2019/4/16 0016 上午 11:10
- * 依赖导致
+ * 依赖倒置
  */
 public class TestMain {
 
