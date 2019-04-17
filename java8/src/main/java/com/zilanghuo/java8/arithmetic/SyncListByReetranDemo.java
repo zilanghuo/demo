@@ -49,7 +49,6 @@ public class SyncListByReetranDemo {
                     try {
                         listDemo.get();
                     } catch (Exception e) {
-
                     }
                     System.out.println("消费剩余个数：" + listDemo.getCount());
                 }
