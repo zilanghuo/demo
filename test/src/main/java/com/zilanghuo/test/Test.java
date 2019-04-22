@@ -1,12 +1,7 @@
 package com.zilanghuo.test;
 
-import cn.hutool.core.date.DateUtil;
-import cn.hutool.json.JSONUtil;
-
-import java.util.Calendar;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.jar.JarOutputStream;
+import java.math.BigDecimal;
+import java.util.TreeMap;
 
 /**
  * @author laiwufa
@@ -14,32 +9,18 @@ import java.util.jar.JarOutputStream;
  */
 public class Test {
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
 
-        ExecutorService executorService = Executors.newFixedThreadPool(5);
-
-        for (int i = 0; i < 100; i++) {
-            final int subNo = i;
-
-            executorService.execute(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        Thread.sleep(50);
-                    } catch (InterruptedException e) {
-
-                    }
-                    System.out.println(subNo);
-                }
-            });
-
-        }
-
-
+        TreeMap<BigDecimal, String> map = new TreeMap();
+        map.put(BigDecimal.TEN, "1");
+        map.put(BigDecimal.ZERO, "2");
+        map.put(new BigDecimal(11), "3");
+        map.put(new BigDecimal(9), "4");
+        System.out.println(map.get(map.lastKey()));
     }
 
     static int test() {
-        int i = 0 ;
+        int i = 0;
         try {
             return i;
         } catch (Exception e) {
@@ -49,11 +30,11 @@ public class Test {
         }
     }
 
-    void getOne(){
+    void getOne() {
         return;
     }
 
-    static void a(){
+    static void a() {
     }
 
 }
