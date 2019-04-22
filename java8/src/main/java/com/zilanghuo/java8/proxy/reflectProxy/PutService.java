@@ -7,6 +7,14 @@ package com.zilanghuo.java8.proxy.reflectProxy;
  * use:
  */
 public class PutService implements IPutService {
+
+    public PutService(String a){
+        System.out.println(a);
+    }
+
+    public PutService(){
+    }
+
     @Override
     public void get() {
         System.out.println("real,get");
