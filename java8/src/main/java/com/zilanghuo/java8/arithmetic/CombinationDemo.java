@@ -3,6 +3,7 @@ package com.zilanghuo.java8.arithmetic;
 /**
  * @author laiwufa
  * @date 2019/3/25 0025 下午 4:41
+ * 获取数组个数的随意组合算法
  */
 public class CombinationDemo {
 
