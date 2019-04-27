@@ -46,6 +46,46 @@ public class DotApplicationListReqDto implements Serializable {
      */
     private List<AppInfo> appInfoList = new ArrayList();
 
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public String getMac() {
+        return mac;
+    }
+
+    public void setMac(String mac) {
+        this.mac = mac;
+    }
+
+    public String getImei() {
+        return imei;
+    }
+
+    public void setImei(String imei) {
+        this.imei = imei;
+    }
+
+    public Date getTriggerTime() {
+        return triggerTime;
+    }
+
+    public void setTriggerTime(Date triggerTime) {
+        this.triggerTime = triggerTime;
+    }
+
+    public List<AppInfo> getAppInfoList() {
+        return appInfoList;
+    }
+
+    public void setAppInfoList(List<AppInfo> appInfoList) {
+        this.appInfoList = appInfoList;
+    }
+
     @Data
     @NoArgsConstructor
     @AllArgsConstructor
@@ -78,6 +118,45 @@ public class DotApplicationListReqDto implements Serializable {
          */
         private Long lastUpdateTime;
 
+        public String getAppName() {
+            return appName;
+        }
+
+        public void setAppName(String appName) {
+            this.appName = appName;
+        }
+
+        public String getPackageName() {
+            return packageName;
+        }
+
+        public void setPackageName(String packageName) {
+            this.packageName = packageName;
+        }
+
+        public String getVersionName() {
+            return versionName;
+        }
+
+        public void setVersionName(String versionName) {
+            this.versionName = versionName;
+        }
+
+        public Long getFirstInstallTime() {
+            return firstInstallTime;
+        }
+
+        public void setFirstInstallTime(Long firstInstallTime) {
+            this.firstInstallTime = firstInstallTime;
+        }
+
+        public Long getLastUpdateTime() {
+            return lastUpdateTime;
+        }
+
+        public void setLastUpdateTime(Long lastUpdateTime) {
+            this.lastUpdateTime = lastUpdateTime;
+        }
     }
 
 
