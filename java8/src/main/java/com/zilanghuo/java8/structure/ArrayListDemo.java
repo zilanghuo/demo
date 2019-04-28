@@ -49,8 +49,8 @@ public class ArrayListDemo {
         }
         // for循环
         for (int i = 0; i < list.size(); i++) {
-            System.out.println("for:" + list.get(i));
-             list.remove(i);
+            System.out.println("for:" + list.get(i) + ",size:" + list.size());
+            list.remove(i);
         }
 
     }
