@@ -1,0 +1,18 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!-- 通过构造器注入-->
+    <bean id="aService" class="com.zilanghuo.web.service.AService" scope="singleton">
+        <property name="bService" ref="bService"/>
+    </bean>
+    <bean id="bService" class="com.zilanghuo.web.service.BService" scope="singleton">
+        <property name="cService" ref="cService" />
+    </bean>
+    <bean id="cService" class="com.zilanghuo.web.service.CService" scope="singleton">
+        <property name="aService" ref="aService"/>
+    </bean>
+
+</beans>

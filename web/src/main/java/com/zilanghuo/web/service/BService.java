@@ -7,14 +7,18 @@ import org.springframework.stereotype.Service;
  * @author laiwufa
  * @date 2019/4/28 0028 下午 4:26
  */
-@Service
 public class BService {
-
-    @Autowired
     private CService cService;
+
+   /* public BService(CService cService) {
+        this.cService = cService;
+    }*/
 
     public void testB(){
         System.out.println("testB.....................");
-        cService.testC();
+    }
+
+    public void setcService(CService cService) {
+        this.cService = cService;
     }
 }
