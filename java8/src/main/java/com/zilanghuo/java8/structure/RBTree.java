@@ -1,5 +1,9 @@
 package com.zilanghuo.java8.structure;
 
+/**
+ * 红黑树
+ * @param <T>
+ */
 public class RBTree<T extends Comparable<T>> {
     private RBTNode<T> mRoot;    // 根结点
 

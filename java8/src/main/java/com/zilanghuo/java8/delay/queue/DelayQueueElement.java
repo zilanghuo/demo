@@ -57,4 +57,21 @@ public class DelayQueueElement implements Delayed {
         sb.append('}');
         return sb.toString();
     }
+
+
+    public long getDelay() {
+        return delay;
+    }
+
+    public long getExpire() {
+        return expire;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public long getNow() {
+        return now;
+    }
 }
