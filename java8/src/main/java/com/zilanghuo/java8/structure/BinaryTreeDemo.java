@@ -116,7 +116,7 @@ public class BinaryTreeDemo {
     }
 
     /**
-     * 广度遍历
+     * 广度遍历，先入先出
      *
      * @param binaryTree
      */
