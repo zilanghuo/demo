@@ -1,16 +1,24 @@
 package com.zilanghuo.test;
 
 import java.math.BigDecimal;
-import java.util.List;
-import java.util.Stack;
 import java.util.TreeMap;
-import java.util.Vector;
 
 /**
  * @author laiwufa
  * @date 2019/3/14 0014 下午 3:43
  */
 public class Test {
+
+
+    @org.junit.Test
+    public void testOne() {
+        ArrayList list = new ArrayList();
+        list.add(1);
+        list.add(2);
+        list.add(1, 1);
+        System.out.println(JSONUtil.toJsonStr(list));
+
+    }
 
     public static void main(String[] args) throws Exception {
 

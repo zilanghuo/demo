@@ -15,6 +15,8 @@ public class AtomicForSync {
     public static void main(String[] args) {
         Thread subtractThread = new VolatileNotAtomic.SubtractThread();
         subtractThread.start();
+        count.getAndIncrement();
+        count.getAndIncrement();
         for (int i = 0; i < NUMBER; i++) {
             count.incrementAndGet();
         }
