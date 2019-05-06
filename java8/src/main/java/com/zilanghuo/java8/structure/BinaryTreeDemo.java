@@ -2,6 +2,9 @@ package com.zilanghuo.java8.structure;
 
 import cn.hutool.json.JSONUtil;
 
+import java.util.ArrayDeque;
+import java.util.Queue;
+
 /**
  * @author laiwufa
  * @date 2019/5/5 22:33
@@ -22,6 +25,10 @@ public class BinaryTreeDemo {
         demo.midOrder(tree);
         System.out.println("------");
         demo.behindOrder(tree);
+        System.out.println("------");
+        demo.bfsOrder(tree);
+        System.out.println("------");
+        System.out.println("深度：" + demo.getHeight(tree));
     }
 
     /**
@@ -106,6 +113,45 @@ public class BinaryTreeDemo {
             behindOrder(binaryTree.getRight());
             System.out.println(binaryTree.getData());
         }
+    }
+
+    /**
+     * 广度遍历
+     *
+     * @param binaryTree
+     */
+    public void bfsOrder(BinaryTree binaryTree) {
+        Queue<BinaryTree> queue = new ArrayDeque();
+        queue.add(binaryTree);
+        while (!queue.isEmpty()) {
+            BinaryTree poll = queue.poll();
+            System.out.print(poll.getData() + "-");
+            if (null != poll.getLeft()) {
+                queue.add(poll.getLeft());
+            }
+            if (null != poll.getRight()) {
+                queue.add(poll.getRight());
+            }
+        }
+    }
+
+    /**
+     * 获取树的深度
+     *
+     * @param binaryTree
+     * @return
+     */
+    public int getHeight(BinaryTree binaryTree) {
+        if (null == binaryTree) {
+            return 0;
+        }
+        int leftHeight = getHeight(binaryTree.getLeft());
+        int rightHeight = getHeight(binaryTree.getRight());
+        int max = leftHeight;
+        if (max < rightHeight) {
+            max = rightHeight;
+        }
+        return max + 1;
     }
 
 }
