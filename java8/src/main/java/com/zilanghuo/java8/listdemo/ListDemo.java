@@ -14,6 +14,7 @@ public class ListDemo {
         ListDemo demo = new ListDemo();
         ArrayList list = demo.initArrayList();
         LinkedList linkedList = demo.initLinkedList();
+
         demo.addCostTime(list); // 69702
         demo.addCostTime(linkedList); // 75
         // demo.readCostTime(list);
