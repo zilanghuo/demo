@@ -4,6 +4,7 @@ import cn.hutool.json.JSONUtil;
 
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
@@ -12,7 +13,7 @@ import java.util.Map;
 public class arithmeticDemo {
 
     public static void main(String[] args) {
-        getFrequency("hello world aaaaaaaaaaa");
+        getCharCount("eeeeaaabbcd");
     }
 
     /**
@@ -106,4 +107,26 @@ public class arithmeticDemo {
             }
         }
     }
+
+    /**
+     * 题目：字符串：eeeeaaabbcd,输出字符串为4e3a2b1c1d
+     *
+     * @param str
+     */
+    static void getCharCount(String str) {
+        LinkedHashMap<Character, Integer> map = new LinkedHashMap();
+        char[] chars = str.toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            Integer integer = map.get(chars[i]);
+            System.out.print(chars[i]);
+            map.put(chars[i], integer == null ? 1 : integer + 1);
+        }
+        System.out.println("--------------");
+        Iterator<Map.Entry<Character, Integer>> iterator = map.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<Character, Integer> next = iterator.next();
+            System.out.print(next.getValue() + "" + next.getKey());
+        }
+    }
+
 }
