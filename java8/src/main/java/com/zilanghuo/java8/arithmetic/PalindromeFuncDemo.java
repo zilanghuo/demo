@@ -8,7 +8,7 @@ package com.zilanghuo.java8.arithmetic;
 public class PalindromeFuncDemo {
 
     public static void main(String[] args) {
-        String str = "abba";
+        String str = "ab51b0a";
         Boolean palindromeStr = isPalindromeStr(str.toCharArray(), 0, str.length() - 1);
         System.out.println(palindromeStr);
     }
@@ -22,18 +22,15 @@ public class PalindromeFuncDemo {
      * @return
      */
     static Boolean isPalindromeStr(char[] chars, int first, int last) {
-        int mid = chars.length / 2;
-        if (chars.length % 2 != 0) {
-            mid = mid + 1;
+        if (first > last) {
+            return true;
         }
-        if (last >= mid) {
-            if (chars[first] == chars[last]) {
-                System.out.println("------palindrome");
-                return isPalindromeStr(chars, ++first, --last);
-            }
+        if (chars[first] == chars[last]) {
+            System.out.println("------palindrome");
+            return isPalindromeStr(chars, ++first, --last);
+        } else {
+            return false;
         }
-        System.out.println("------not palindrome");
-        return false;
     }
 
 }
