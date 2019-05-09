@@ -13,7 +13,7 @@ import java.util.Map;
 public class arithmeticDemo {
 
     public static void main(String[] args) {
-        getCharCount("eeeeaaabbcd");
+        rotateString("abcdef",2);
     }
 
     /**
@@ -127,6 +127,22 @@ public class arithmeticDemo {
             Map.Entry<Character, Integer> next = iterator.next();
             System.out.print(next.getValue() + "" + next.getKey());
         }
+    }
+
+    /**
+     * 给定一个字符串，要求把字符串前面的若干个字符移动到字符串的尾部，如把字符串“abcdef” 前面的2
+     * 个字符'a'和'b'移动到字符串的尾部，使得原字符串变成字符串“cdefab” 。 请写一个函数完成此功能，要
+     * 求对长度为n的字符串操作的时间复杂度为 O(n)，空间复杂度为 O(1)。
+     *
+     * @param str
+     * @param index
+     */
+    static void rotateString(String str, int index) {
+        String preStr = str.substring(index);
+        for (int i = 0; i < index; i++) {
+            preStr = preStr + str.charAt(i);
+        }
+        System.out.println(preStr);
     }
 
 }
