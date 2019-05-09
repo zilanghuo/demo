@@ -34,7 +34,6 @@
         <module>protocol</module>
         <module>test</module>
         <module>java-resource</module>
-        <module>java7resource</module>
     </modules>
 
     <dependencies>
