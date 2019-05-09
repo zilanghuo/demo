@@ -33,7 +33,6 @@
         <module>zk</module>
         <module>protocol</module>
         <module>test</module>
-        <module>java-resource</module>
     </modules>
 
     <dependencies>
