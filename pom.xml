@@ -33,6 +33,7 @@
         <module>zk</module>
         <module>protocol</module>
         <module>test</module>
+        <module>druid-test</module>
     </modules>
 
     <dependencies>
