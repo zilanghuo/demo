@@ -17,6 +17,8 @@ public class ReferenceTest2 {
         System.out.println(x.name + "--" + y.name);
         swap(x, y);
         System.out.println(x.name + "--" + y.name);
+        swap2(x, y);
+        System.out.println(x.name + "--" + y.name);
 
     }
 
@@ -25,6 +27,12 @@ public class ReferenceTest2 {
         x = y;
         y = temp;
         System.out.println(x.name + "--" + y.name);
+
+    }
+
+    static void swap2(Staff x, Staff y) {
+      x.name = "c";
+      y.name = "d";
 
     }
 
