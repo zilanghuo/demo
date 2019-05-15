@@ -3,13 +3,15 @@ package com.zilanghuo.java8.arithmetic;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.Iterator;
+import java.util.Map;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
 /**
  * 一致性hash算法
  */
-public class TestConsitentHash {
+public class ConsitentHashDemo {
 
     public static int[] argumentIndex = new int[2];
 
@@ -21,10 +23,13 @@ public class TestConsitentHash {
 
     public static void main(String[] args) {
         init();
-        String peole = "小红1";
+        String peole = "xiaohongone";
         System.out.println(toKey(peole));
         System.out.println(md5(toKey(peole)));
         long parameterLong = hash(md5(toKey(peole)), 0);
+        String s = Long.toBinaryString(parameterLong);
+        System.out.println(s);
+
         System.out.println(parameterLong);
         System.out.println(selectForKey(parameterLong));
     }
