@@ -34,6 +34,7 @@
         <module>protocol</module>
         <module>test</module>
         <module>druid-test</module>
+        <module>jedis-test</module>
     </modules>
 
     <dependencies>
