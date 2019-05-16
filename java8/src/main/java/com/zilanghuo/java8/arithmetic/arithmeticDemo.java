@@ -15,7 +15,7 @@ public class arithmeticDemo {
             list.add(i);
         }
         getLast(8, 4, 1);
-
+        getLastTwo(list,4);
     }
 
     /**
@@ -178,5 +178,4 @@ public class arithmeticDemo {
         System.out.println("result:" + result);
         return result;
     }
-
 }
