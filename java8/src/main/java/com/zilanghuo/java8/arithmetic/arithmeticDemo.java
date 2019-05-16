@@ -2,10 +2,7 @@ package com.zilanghuo.java8.arithmetic;
 
 import cn.hutool.json.JSONUtil;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * 算法
@@ -13,7 +10,12 @@ import java.util.Map;
 public class arithmeticDemo {
 
     public static void main(String[] args) {
-        rotateString("abcdef",2);
+        List<Integer> list = new ArrayList();
+        for (int i = 1; i <= 8; i++) {
+            list.add(i);
+        }
+        getLast(8, 4, 1);
+
     }
 
     /**
@@ -143,6 +145,38 @@ public class arithmeticDemo {
             preStr = preStr + str.charAt(i);
         }
         System.out.println(preStr);
+    }
+
+    /**
+     * 给定一个36位的集合，逢4就踢出，直到剩下最后一个。求最后一个原先的index位置
+     * 约瑟夫环:m为全部人数，k为逢k踢出，第几个人出环编号
+     */
+
+    static int getLast(int totalCount, int avg, int startIndex) {
+        Boolean[] arr = new Boolean[totalCount];
+        Arrays.fill(arr, true);
+        int atIndex = startIndex - 1;
+        int killCount = 0;
+        int result = 1;
+        while (killCount < totalCount) {
+            for (int i = 0; i < avg; i++) {
+                // 跳过
+                while (!arr[atIndex]) {
+                    atIndex = (atIndex + 1) % totalCount;
+                }
+                if (i == avg - 1) {
+                    System.out.println("remove:" + (atIndex + 1));
+                    arr[atIndex] = false;
+                    killCount++;
+                }
+                if (killCount == totalCount - 1) {
+                    result = atIndex + 1;
+                }
+                atIndex = (atIndex + 1) % totalCount;
+            }
+        }
+        System.out.println("result:" + result);
+        return result;
     }
 
 }
