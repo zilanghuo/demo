@@ -1,7 +1,7 @@
-package com.zilanghuo.java8.proxy.cglib;
+package com.zilanghuo.java8.design.proxy.cglib;
 
-import com.zilanghuo.java8.proxy.ITakeService;
-import com.zilanghuo.java8.proxy.TakeService;
+import com.zilanghuo.java8.design.proxy.ITakeService;
+import com.zilanghuo.java8.design.proxy.TakeService;
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;

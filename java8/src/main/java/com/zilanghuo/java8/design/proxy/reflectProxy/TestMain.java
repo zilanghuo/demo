@@ -1,4 +1,4 @@
-package com.zilanghuo.java8.proxy.reflectProxy;
+package com.zilanghuo.java8.design.proxy.reflectProxy;
 
 
 import java.lang.reflect.Constructor;
@@ -11,7 +11,7 @@ import java.lang.reflect.Constructor;
 public class TestMain {
 
     public static void main(String[] args) throws Exception{
-        Class<IPutService> classz = (Class<IPutService>)Class.forName("com.zilanghuo.java8.proxy.reflectProxy.PutService");
+        Class<IPutService> classz = (Class<IPutService>)Class.forName("com.zilanghuo.java8.design.proxy.reflectProxy.PutService");
         System.out.println(classz.getPackage().getName());
         Constructor<IPutService> con = classz.getConstructor();
         IPutService putService =  con.newInstance();

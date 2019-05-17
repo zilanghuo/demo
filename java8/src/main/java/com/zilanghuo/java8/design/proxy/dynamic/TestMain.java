@@ -1,8 +1,8 @@
-package com.zilanghuo.java8.proxy.dynamic;
+package com.zilanghuo.java8.design.proxy.dynamic;
 
 
-import com.zilanghuo.java8.proxy.ITakeService;
-import com.zilanghuo.java8.proxy.TakeService;
+import com.zilanghuo.java8.design.proxy.ITakeService;
+import com.zilanghuo.java8.design.proxy.TakeService;
 
 import java.lang.reflect.Proxy;
 

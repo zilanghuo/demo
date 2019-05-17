@@ -1,6 +1,6 @@
-package com.zilanghuo.java8.proxy.staticProxy;
+package com.zilanghuo.java8.design.proxy.staticProxy;
 
-import com.zilanghuo.java8.proxy.ITakeService;
+import com.zilanghuo.java8.design.proxy.ITakeService;
 
 /**
  * @author laiwufa

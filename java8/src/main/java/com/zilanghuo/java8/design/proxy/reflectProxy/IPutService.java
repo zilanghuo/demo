@@ -1,4 +1,4 @@
-package com.zilanghuo.java8.proxy.reflectProxy;
+package com.zilanghuo.java8.design.proxy.reflectProxy;
 
 /**
  * @author laiwufa

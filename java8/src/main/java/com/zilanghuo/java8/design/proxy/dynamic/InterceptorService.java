@@ -1,4 +1,4 @@
-package com.zilanghuo.java8.proxy.dynamic;
+package com.zilanghuo.java8.design.proxy.dynamic;
 
 /**
  * @author laiwufa
