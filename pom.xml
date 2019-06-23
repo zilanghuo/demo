@@ -35,6 +35,7 @@
         <module>test</module>
         <module>druid-test</module>
         <module>jedis-test</module>
+        <module>spring-cloud-demo</module>
     </modules>
 
     <dependencies>
