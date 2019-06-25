@@ -11,7 +11,7 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
  * use:
  */
 public class TimeClientHandler extends ChannelInboundHandlerAdapter {
-    private byte[] req=("QUERY TIME ORDER" + System.getProperty("line.separator")).getBytes();
+    private byte[] req = ("QUERY TIME ORDER" + System.getProperty("line.separator")).getBytes();
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) {//1
@@ -22,6 +22,7 @@ public class TimeClientHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+        System.out.println("接收到服务端数据：");
         String body = (String) msg;
         System.out.println("Now is:" + body);
     }
