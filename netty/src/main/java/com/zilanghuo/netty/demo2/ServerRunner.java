@@ -21,10 +21,11 @@ public class ServerRunner {
         new ServerRunner().start();
     }
 
-    public void start(){
+    public void start() {
+        // 处理连接请求
         EventLoopGroup group = new NioEventLoopGroup();
+        // 接收数据
         EventLoopGroup workGroup = new NioEventLoopGroup();
-
         try {
             ServerBootstrap b = new ServerBootstrap();
             b.group(group, workGroup)
@@ -39,10 +40,11 @@ public class ServerRunner {
 
             ChannelFuture f = b.bind().sync();
             System.out.println(ServerRunner.class.getName() + " started and listen on " + f.channel().localAddress());
+            // 同步接收
             f.channel().closeFuture().sync();
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             try {
                 group.shutdownGracefully().sync();
             } catch (InterruptedException e) {

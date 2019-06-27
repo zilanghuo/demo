@@ -42,7 +42,7 @@ public class ClientRunner {
             if (f.channel().isActive()) {
                 f.channel().writeAndFlush(Unpooled.copiedBuffer("Hello Casper!", CharsetUtil.UTF_8));
             }
-            Thread.sleep(1000);
+            Thread.sleep(1000 * 2);
         } finally {
             group.shutdownGracefully().sync();
         }
