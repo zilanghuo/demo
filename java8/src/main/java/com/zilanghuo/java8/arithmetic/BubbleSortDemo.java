@@ -7,7 +7,7 @@ import cn.hutool.json.JSONUtil;
  * @date 2019/4/28 21:32
  * 冒泡排序算法
  */
-public class bubbleSortDemo {
+public class BubbleSortDemo {
 
     public static void main(String[] args) {
         int[] arr = new int[]{4, 6, 12, 654, 343, 18, 35, 43, 56, 76, 32, 54};

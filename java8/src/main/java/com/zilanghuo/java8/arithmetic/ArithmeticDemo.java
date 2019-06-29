@@ -7,14 +7,32 @@ import java.util.*;
 /**
  * 算法
  */
-public class arithmeticDemo {
+public class ArithmeticDemo {
 
     public static void main(String[] args) {
-        List<Integer> list = new ArrayList();
-        for (int i = 1; i <= 8; i++) {
-            list.add(i);
-        }
-        getLast(8, 4, 1);
+        System.out.println(greedy_cut_rope_1(4));
+    }
+
+    /**
+     * 贪心算法：使所做的选择看起来都是当前最佳的，期望通过所做的局部最优选择来产生一个全局最优解。
+     * 给你一个长度为n的绳子，请把绳子剪成m段（m，n都是整数，且都大于1）每段绳子的长度即为K[0],K[1],K[2]...K[m]。请问K[0]*k[1]..*k[m]可能的最大乘积是多少？
+     * @param n
+     * @return
+     */
+    public static int greedy_cut_rope_1(int n) {
+        if (n < 2)
+            return 0;
+        if (n == 2)
+            return 1;
+        if (n == 3)
+            return 2;
+        //尽可能多地去减长度为3的绳子段
+        int timesOf3 = n / 3;
+        //当绳子最后剩下的长度为4的时候，不能再去剪去长度为3的绳子段
+        if (n - timesOf3 * 3 == 1)
+            timesOf3 -= 1;
+        int timesOf2 = (n - timesOf3 * 3) / 2;
+        return (int) (Math.pow(3, timesOf3) * Math.pow(2, timesOf2));
     }
 
     /**
