@@ -11,7 +11,8 @@ import java.util.stream.Collectors;
 public class SteamDemo {
 
     public static void main(String[] args) {
-        listJavaMethod();
+
+
 
     }
 
@@ -25,7 +26,7 @@ public class SteamDemo {
         listOne.stream().forEach(str -> System.out.print(str));
         System.out.println("--------------------------------");
         // 对数据进行处理
-        listOne = listOne.stream().map(str -> "--"+str).collect(Collectors.toList());
+        listOne = listOne.stream().map(str -> "--" + str).collect(Collectors.toList());
         listOne.stream().forEach(str -> System.out.print(str));
         System.out.println("--------------------------------");
         // 对数据进行过滤
