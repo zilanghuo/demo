@@ -1,5 +1,6 @@
 package com.zilanghuo.springbootdemo.controller;
 
+import com.zilanghuo.springbootdemo.model.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Scope;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,17 +18,21 @@ public class Health {
 
     @RequestMapping(value = "/health/check")
     @ResponseBody
-    public String check() {
+    public User check() {
         try {
             log.info("健康检查-----------------------------------");
             log.info("最大可用内存:" + Runtime.getRuntime().maxMemory() / 1024 / 1024 + "M\t");
             log.info("当前JVM空闲内存:" + Runtime.getRuntime().freeMemory() / 1024 / 1024 + "M\t");
             log.info("当前JVM占用的内存总数:" + Runtime.getRuntime().totalMemory() / 1024 / 1024 + "M\t");
             log.info("-----------------------------------");
-            return "OK";
+            User user = new User();
+            user.setAge(12);
+            user.setId(2323L);
+            user.setName("小红");
+            return user;
         } catch (Exception e) {
             log.error("checkHealth error", e);
-            return "FAIL";
+            return new User();
         }
 
     }
