@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class Health {
 
-    @RequestMapping(value = "/health/check")
+    @RequestMapping(value = "/health2/check")
     @ResponseBody
     public User check() {
         try {

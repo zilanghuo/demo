@@ -4,6 +4,8 @@ import cn.hutool.json.JSONUtil;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Objects;
 import java.util.TreeMap;
 
 /**
@@ -12,6 +14,18 @@ import java.util.TreeMap;
  */
 public class Test {
 
+    @org.junit.Test
+    public  void testTwo() throws Exception{
+        Date dateline = new Date();
+        Thread.sleep(1000);
+        if(new Date().after(dateline)){		   //2019-05版本
+            System.out.println("1");
+        }else if(Objects.equals("on","on")){ //2019-03版本
+            System.out.println("2");
+        }else{
+            System.out.println("3");
+        }
+    }
 
     @org.junit.Test
     public void testOne() {
