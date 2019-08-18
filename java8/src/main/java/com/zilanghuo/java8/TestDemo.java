@@ -20,6 +20,11 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class TestDemo {
 
     @Test
+    public void aa(){
+        StaticClass.A a = new StaticClass.A();
+    }
+
+    @Test
     public void testList() throws Exception{
         List<String> list = new ArrayList(4);
         list.add("1");
