@@ -11,6 +11,7 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.stream.Stream;
 
 /**
  * @author laiwufa
@@ -22,6 +23,11 @@ public class TestDemo {
     @Test
     public void aa(){
         StaticClass.A a = new StaticClass.A();
+    }
+
+    @Test
+    public void bb(){
+        System.out.println(Stream.iterate("0", i -> "0").limit(4 - 0).reduce(String::concat).get());
     }
 
     @Test
@@ -47,10 +53,12 @@ public class TestDemo {
 
     @Test
     public void testDate() throws Exception{
-        Date startDate = new Date();
-        Thread.sleep(2000);
-        Date endDate = new Date();
-        System.out.println(startDate.before(endDate));
+        String str = "aaas.zip";
+        String substring = str.substring(str.lastIndexOf(".")+1, str.length());
+        System.out.println(substring);
+        System.out.println(str.substring(0,str.lastIndexOf(".")));
+
+
     }
 
     @Test
