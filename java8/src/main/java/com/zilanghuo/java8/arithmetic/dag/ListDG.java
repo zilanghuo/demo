@@ -90,7 +90,7 @@ public class ListDG {
         int vlen = vexs.length;
         int elen = edges.length;
 
-        // 初始化"顶点"
+        // 初始化"顶点"(点数)
         mVexs = new ArrayList<VNode>();
         for (int i = 0; i < vlen; i++) {
             // 新建VNode
@@ -114,7 +114,7 @@ public class ListDG {
             ENode node1 = new ENode();
             node1.ivex = p2;
             // 将node1链接到"p1所在链表的末尾"
-            if(mVexs.get(p1).firstEdge == null) {
+             if(mVexs.get(p1).firstEdge == null) {
                 mVexs.get(p1).firstEdge = node1;
             } else {
                 linkLast(mVexs.get(p1).firstEdge, node1);
@@ -332,10 +332,10 @@ public class ListDG {
         char[] vexs = {'0', '1', '2', '3', '4', '5', '6', '7'};
         char[][] edges = new char[][]{
                 {'0', '3'},
-                {'1', '2'},
-                {'1', '6'},
-                {'2', '4'},
-                {'4', '6'}};
+                {'0', '4'},
+                {'1', '3'},
+                {'3', '5'},
+                {'6', '7'}};
         ListDG pG;
 
         // 自定义"图"(输入矩阵队列)
