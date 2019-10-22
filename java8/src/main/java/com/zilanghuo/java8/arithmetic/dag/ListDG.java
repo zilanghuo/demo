@@ -335,6 +335,7 @@ public class ListDG {
                 {'0', '4'},
                 {'1', '3'},
                 {'3', '5'},
+                {'5', '7'},
                 {'6', '7'}};
         ListDG pG;
 
@@ -347,7 +348,8 @@ public class ListDG {
         //pG.DFS();     // 深度优先遍历
         //pG.BFS();     // 广度优先遍历
         pG.topologicalSort();     // 拓扑排序    }
-
+        pG.DFS();
+        pG.BFS();
     }
     private static void demoOne() {
         char[] vexs = {'A', 'B', 'C', 'D', 'E', 'F', 'G'};

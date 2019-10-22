@@ -35,6 +35,7 @@
         <module>test</module>
         <module>druid-test</module>
         <module>jedis-test</module>
+        <module>Hadoop</module>
     </modules>
 
     <dependencies>
