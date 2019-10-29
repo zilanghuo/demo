@@ -38,12 +38,10 @@ public class HdfsClient {
      */
     @Test
     public void testAddFileToHdfs() throws Exception {
-
         // 要上传的文件所在的本地路径
-
         // 要上传到hdfs的目标路径*/
-        Path src = new Path("d:/GameLog.txt");
-        Path dst = new Path("/");
+        Path src = new Path("/Users/admin/Downloads/pi.py");
+        Path dst = new Path("/tmp/laiwufa/pi.py");
         fs.copyFromLocalFile(src, dst);
 
         fs.close();
@@ -60,9 +58,21 @@ public class HdfsClient {
 
         // fs.copyToLocalFile(new Path("/mysql-connector-java-5.1.28.jar"), new
         // Path("d:/"));
-        fs.copyToLocalFile(false, new Path("/install.log.syslog"), new Path("e:/"), true);
+        fs.copyToLocalFile(false, new Path("/tmp/laiwufa/aa.txt"), new Path("/Users/admin/Downloads"), true);
         fs.close();
 
+    }
+
+    /**
+     * 目录操作
+     *
+     * @throws IllegalArgumentException
+     * @throws IOException
+     */
+    @Test
+    public void deleteFile() throws IllegalArgumentException, IOException {
+        // 删除文件夹 ，如果是非空文件夹，参数2必须给值true ，删除所有子文件夹
+        fs.delete(new Path("/tmp/laiwufa"), true);
     }
 
     /**
@@ -124,7 +134,7 @@ public class HdfsClient {
     @Test
     public void testListAll() throws FileNotFoundException, IllegalArgumentException, IOException {
         //可以右击方法名，Run 测试一下。
-        FileStatus[] listStatus = fs.listStatus(new Path("/"));
+        FileStatus[] listStatus = fs.listStatus(new Path("/tmp/laiwufa/"));
 
         String flag = "";
         for (FileStatus fstatus : listStatus) {
@@ -134,9 +144,8 @@ public class HdfsClient {
             } else {
                 flag = "d-- ";
             }
-            System.out.println(flag + fstatus.getPath().getName());
+            System.out.print(flag + fstatus.getPath().getName()+" ");
             System.out.println(fstatus.getPermission());
-
         }
 
     }

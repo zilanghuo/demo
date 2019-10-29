@@ -19,6 +19,14 @@
             <version>3.13.1</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/ldapsdk/ldapsdk -->
+        <dependency>
+            <groupId>ldapsdk</groupId>
+            <artifactId>ldapsdk</artifactId>
+            <version>4.1</version>
+        </dependency>
+
+
     </dependencies>
 
 

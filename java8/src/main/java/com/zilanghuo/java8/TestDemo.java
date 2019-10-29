@@ -157,6 +157,26 @@ public class TestDemo {
 
     }
 
+
+    public static String encryptAndDencrypt(String value, char secret) {
+        byte[] bt = value.getBytes(); // 将需要加密的内容转换为字节数组
+        for (int i = 0; i < bt.length; i++) {
+            bt[i] = (byte) (bt[i] ^ (int) secret); // 通过异或运算进行加密
+        }
+        String newresult = new String(bt, 0, bt.length); // 将加密后的字符串保存到 newresult 变量中
+        return newresult;
+    }
+
+    public static void main(String[] args) {
+        char secret = '8';
+        String pass = "fasdfdasf. fdsafdsa";
+        System.out.println("原字符串内容：" + pass);
+        String encryptResult = encryptAndDencrypt(pass, secret);
+        System.out.println("加密后的内容：" + encryptResult);
+        String uncryptResult = encryptAndDencrypt(encryptResult, secret);
+        System.out.println("解密后的内容：" + uncryptResult);
+    }
+
 }
 
 @Data
