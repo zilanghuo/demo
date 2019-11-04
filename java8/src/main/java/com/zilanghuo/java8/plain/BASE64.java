@@ -1,4 +1,4 @@
-package com.zilanghuo.java8;
+package com.zilanghuo.java8.plain;
 
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
