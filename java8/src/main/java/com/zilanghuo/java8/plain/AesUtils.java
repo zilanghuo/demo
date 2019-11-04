@@ -1,4 +1,4 @@
-package com.zilanghuo.java8;
+package com.zilanghuo.java8.plain;
 
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.lang3.StringUtils;
@@ -253,9 +253,9 @@ public class AesUtils {
         String originalStr = AesUtils.decryptCbcMode(encryptedStr, "4Ct7TyXZa19rgQKK", null);
         System.out.println(originalStr);
 
-        String encryptedStr2 = AesUtils.encryptEcbMode("{\"username\":\"Tom\",\"password\":\"123456\",\"mobile\":\"12306\",\"email\":\"admin@zifangsky.cn\"}", "4Ct7TyXZa19rgQKK");
+       /* String encryptedStr2 = AesUtils.encryptEcbMode("{\"username\":\"Tom\",\"password\":\"123456\",\"mobile\":\"12306\",\"email\":\"admin@zifangsky.cn\"}", "4Ct7TyXZa19rgQKK");
         String originalStr2 = AesUtils.decryptEcbMode(encryptedStr2, "4Ct7TyXZa19rgQKK");
-        System.out.println(originalStr2);
+        System.out.println(originalStr2);*/
 
     }
 }
