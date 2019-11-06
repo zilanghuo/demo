@@ -12,20 +12,45 @@ import java.security.spec.X509EncodedKeySpec;
  */
 public class RSAUtils {
 
-    public static final String PUBLIC_ENCODE = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCdVxJztryoRRZceYLjEhsMMxx0v2rg5+bTdWj+IrJOKgFk6N03rHQVhr39uHSBhcdf/NaFKHL3S+xJWe0bbqcyTV8P2BR5h5gZYdI8ypUEilSnRxHNlo18HrAxVuQAFi6vef73MJ/jiMpm+Br+I2yqoieS3QFYw/D0MhtO2yD3ywIDAQAB";
+    public static final String PUBLIC_ENCODE = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDm1FeGNr7B7ukUwdY/q7Z2GlQA58RBtamysrRLH0lR5/1nTpyZf5zQGZw6whqeOeWq2MyCWM08XoXKIMYWme83UhxHnGb5NhtXOl4JM2el1DSEKM36r1AE7adzCvLy0a6QX7byl03luWk7jUX6gx6plyFyVlitVHOI/SWayVWd7wIDAQAB";
 
-    public static final String PRIVATE_DECODE = "MIICdQIBADANBgkqhkiG9w0BAQEFAASCAl8wggJbAgEAAoGBAJ1XEnO2vKhFFlx5guMSGwwzHHS/auDn5tN1aP4isk4qAWTo3TesdBWGvf24dIGFx1/81oUocvdL7ElZ7RtupzJNXw/YFHmHmBlh0jzKlQSKVKdHEc2WjXwesDFW5AAWLq95/vcwn+OIymb4Gv4jbKqiJ5LdAVjD8PQyG07bIPfLAgMBAAECgYA+FFbhdR5mviuefQsZkNE/NQNrRQNkjdtTX6X3b7UuhgBa0k5GYzLCM5HPA/JkEGakBtyVWWpTDI/EOUkGY9hvryfiqK405PF6c4DLITH6H77/mDYoYeTuh66Q84urhh90bIjXpNzYYQOO7YuQTjLDn25Qcz3lMSlQIcwTBD2m0QJBAN/xERKTWPNVKATc7xjiyGHkxZ8035fbY6skgz2UgvDPBfeNSDsDEr++Xq99m94ZmrS1gTYlwVTNjbLxpyYi4ecCQQCz3TdV9bx/DTDLRiR4PoITeh/0q+DJmQEPmhap92fm8/ZLuQ/x57BGPvCcdv4GAwfTw9iSTS6y+Dj7+5JHoMZ9AkB+mrAXO1xvfTY5wZofDJ9S0N51CpRaKvsnF2ZnGx4H/FKYSLSMQEmKQ5sORcon/3u6LF8XeLLbObahcwMXiWMDAkAil1zZD1WdKbBEp8zDw2HI1SfoKlYk72Qg2AWb0pUM+cZYcdL7Nw/Tsq8bqFbaWSLcO0IfgPCGQu7Sp2NOm0ERAkAEdxTlHs8qT5KpCQx9bzgaYdNnDMJE1XqiqWG0T4dbpFQG8DOkR1+4ykVTjfHi0eWFUxP3n8yy+D+k5wGxmQPd";
+    public static final String PRIVATE_DECODE = "MIICeAIBADANBgkqhkiG9w0BAQEFAASCAmIwggJeAgEAAoGBAObUV4Y2vsHu6RTB1j+rtnYaVADnxEG1qbKytEsfSVHn/WdOnJl/nNAZnDrCGp455arYzIJYzTxehcogxhaZ7zdSHEecZvk2G1c6XgkzZ6XUNIQozfqvUATtp3MK8vLRrpBftvKXTeW5aTuNRfqDHqmXIXJWWK1Uc4j9JZrJVZ3vAgMBAAECgYEAt7Ff/aTvZXH09tnS4FSMHaySES5f1lL1OwpPxECfnpjZ5i5/HQCbEFhxJal2eVhl1vI0vb5hhZtLKTGvsijKXl8BAEU1EB39I1xHY3QF5vc8UxIM3g015wHJ0leSE8wMczS1xYHH8x4OA+n3hXYBpwWJZtU3O4eYGhJ0a4HVMaECQQD2DXliR/z/fgdJMHCZXnT9TWLT3sZjOl9ldE1UNxdlG3yeqfM5s5346OHY0das6tdMec/PHeKH6ZpJcdO1KHfZAkEA8ClQtG9wgtkIY2Vq1l1yKB9/lW7TaXyn+l5NdNHjxyBFI10xMwdVdOJ451afciauX/m2swX4/n1q045nepWvBwJAZsApuIkndepDUKUR4Ho5kK4IX0Hgxv9RZySyRkDbXDWmTPvbvnTru05FQi4e4AcR8bXMuklYmDlNXO5T4osLwQJBAOkU3/vOcB697pMxGahk1ucz8sof3lTxo8GtBnWLQwq+OfuhdZ91za18IyU6f9L00aXaIEPNVyP+qtAZ1Do3zb8CQQDRB8pr18nlCkDmjreU0I5YFgJPdsh+dB92PueO6zFVIBjsVdQBnF7Vts3PMzJ+3IPVnJgLOzmd+MhEpX8ytBqT";
 
-    public static final String str = "hello world";
+    public static final String str = "222222";
+
+    /**
+     * String to hold name of the encryption padding.
+     */
+    public static final String PADDING = "RSA/NONE/NoPadding";
+
+    /**
+     * String to hold name of the security provider.
+     */
+    public static final String PROVIDER = "BC";
+
+    public static final String ALGORITHM = "RSA";
+
 
     public static void main(String[] args) throws Exception {
         PublicKey publicKey = generatePublicKey(PUBLIC_ENCODE);
         PrivateKey privateKey = generatePrivateKey(PRIVATE_DECODE);
+      /*  KeyPair keyPair = generateRSAKeyPair(1024);
+        PublicKey publicKey = keyPair.getPublic();
+        PrivateKey privateKey = keyPair.getPrivate();
+        System.out.println(baseRsaPublicKey(publicKey));
+        System.out.println(baseRsaPrivateKey(privateKey));*/
+
         byte[] encode = rsaEncrypt(str.getBytes(), publicKey);
         System.out.println(encode);
-        byte[] s = rsaDecrypt(encode, privateKey);
-        System.out.println(new String(s));
-
+        String x = Base64.encodeBase64String(encode);
+        System.out.println("base64:"+x);
+        byte[] encodeStr = Base64.decodeBase64(x);
+        byte[] s = rsaDecrypt(encodeStr, privateKey);
+        System.out.println("明文："+new String(s));
+        System.out.println("-------------------------");
+        String x1 = baseRsaEncrypt(str, publicKey);
+        System.out.println(x1);
+        System.out.println(baseRsaDecrypt(x1,privateKey));
     }
 
     /**
@@ -38,12 +63,13 @@ public class RSAUtils {
         KeyPair ret = null;
         try {
             //1、准备生成
-            KeyPairGenerator generator = KeyPairGenerator.getInstance("RSA");
+            Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
+            KeyPairGenerator generator = KeyPairGenerator.getInstance(ALGORITHM,PROVIDER);
             //2、初始化，设置秘钥长度
             generator.initialize(keySize);
             //3、生成，并且返回
             ret = generator.generateKeyPair();
-        } catch (NoSuchAlgorithmException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return ret;
@@ -64,7 +90,8 @@ public class RSAUtils {
                 && key != null) {
             // 1、创建Cipher 使用RSA
             try {
-                Cipher cipher = Cipher.getInstance("RSA");
+                Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
+                Cipher cipher = Cipher.getInstance(PADDING, PROVIDER);
                 //设置Key
                 cipher.init(Cipher.ENCRYPT_MODE, key);
                 ret = cipher.doFinal(data);
@@ -72,7 +99,32 @@ public class RSAUtils {
                 e.printStackTrace();
             }
         }
-        return ret;
+        // 转化为String
+        return  ret;
+    }
+
+    /**
+     * base64 加密
+     * @param plaintext
+     * @param publicKey
+     * @return
+     */
+    public static String baseRsaEncrypt(String plaintext,Key publicKey){
+        byte[] bytes = rsaEncrypt(plaintext.getBytes(), publicKey);
+        return Base64.encodeBase64String(bytes);
+    }
+
+    /**
+     * base64 解密
+     * @param ciphertext
+     * @param privatekey
+     * @return
+     */
+    public static String baseRsaDecrypt(String ciphertext,Key privatekey){
+        //base 解密
+        byte[] bytes = Base64.decodeBase64(ciphertext);
+        return new String(rsaDecrypt(bytes,privatekey));
+
     }
 
     /**
@@ -89,7 +141,8 @@ public class RSAUtils {
                 && key != null) {
             // 1、创建Cipher 使用RSA
             try {
-                Cipher cipher = Cipher.getInstance("RSA");
+                Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
+                Cipher cipher = Cipher.getInstance(PADDING, PROVIDER);
                 //设置Key
                 cipher.init(Cipher.DECRYPT_MODE, key);
                 ret = cipher.doFinal(data);
