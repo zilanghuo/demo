@@ -36,6 +36,7 @@
         <module>druid-test</module>
         <module>jedis-test</module>
         <module>Hadoop</module>
+        <module>springcloud</module>
     </modules>
 
     <dependencies>
