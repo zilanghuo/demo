@@ -1,0 +1,9 @@
+server:
+  port: 8111
+spring:
+  application:
+    name: product-server # 在eureka中此值作为vipaddress,在发现服务时使用
+eureka:
+  client:
+    service-url:
+      defaultZone: http://10.0.68.230:8023/eureka
