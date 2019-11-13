@@ -37,6 +37,7 @@
         <module>jedis-test</module>
         <module>Hadoop</module>
         <module>springcloud</module>
+        <module>sofademo</module>
     </modules>
 
     <dependencies>

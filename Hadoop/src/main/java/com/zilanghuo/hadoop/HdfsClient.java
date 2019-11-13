@@ -26,7 +26,7 @@ public class HdfsClient {
          * 参数优先级： 1、客户端代码中设置的值 2、classpath下的用户自定义配置文件 3、然后是jar中默认配置
          */
         // 获取一个hdfs的访问客户端
-        fs = FileSystem.get(new URI("hdfs://10.0.68.231:8022"), conf, "root");
+        fs = FileSystem.get(new URI("hdfs://10.0.68.232:8022"), conf, "root");
         //fs = FileSystem.get(new URI("hdfs://hadoop03-dev.bigdata.cn:8022"), conf, "root");
 
     }
