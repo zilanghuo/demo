@@ -68,7 +68,7 @@ public class NioInputUtil {
 
     }
 
-    private static void copyFileUsingFileStreams(File source, File dest)
+    public static void copyFileUsingFileStreams(File source, File dest)
             throws IOException {
         InputStream input = null;
         OutputStream output = null;

@@ -12,7 +12,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Hashtable;
+import java.util.Iterator;
 
 /**
  * Created by laiwufa on 2019-10-29
@@ -72,7 +75,7 @@ public class LdapUtil {
             SearchControls constraints = new SearchControls();
             constraints.setSearchScope(SearchControls.SUBTREE_SCOPE);
             @SuppressWarnings("rawtypes")
-            NamingEnumeration en = ctx.search("", "uid=" + usr + "",constraints); // 查询所有用户
+            NamingEnumeration en = ctx.search("", "uid=" + usr + "", constraints); // 查询所有用户
             while (en != null && en.hasMoreElements()) {
                 Object obj = en.nextElement();
                 if (obj instanceof SearchResult) {
@@ -114,12 +117,55 @@ public class LdapUtil {
         return "-1";
     }
 
+    /**
+     * 增加条目
+     * @param ctx
+     * @param itemDn
+     * @param attrValueMap
+     * @throws NamingException
+     */
+    public void addItem(DirContext ctx, String itemDn, HashMap<String, ArrayList<String>> attrValueMap)
+            throws NamingException {
+        try {
+            BasicAttributes entry = new BasicAttributes(true);
+            Iterator<String> defaultAttrValueMapKeyIt = attrValueMap.keySet().iterator();
+            while (defaultAttrValueMapKeyIt.hasNext()) {
+                String attr = defaultAttrValueMapKeyIt.next();
+                ArrayList<String> valueList = attrValueMap.get(attr);
+                if (1 == valueList.size()) {
+                    entry.put(attr, valueList.get(0));
+                } else {
+                    Attribute attribute = new BasicAttribute(attr);
+                    for (String value : valueList) {
+                        attribute.add(value);
+                    }
+                    entry.put(attribute);
+                }
+            }
+            ctx.createSubcontext(itemDn, entry);
+        } catch (NamingException e) {
+            throw e;
+        } finally {
+            ctx.close();
+        }
+    }
+
+
     public static void main(String[] args) throws Exception {
+        DirContext ctx = connectLDAP("10.0.68.236", "389", "Manager", "123456", "dc=yonghui_test,dc=cn");
         String s = checkUser(
                 "test04",
                 "123456",
-                connectLDAP("10.0.68.236", "389", "Manager", "123456", "dc=yonghui_test,dc=cn"));
+                ctx);
         System.out.println(s);
+        HashMap<String, ArrayList<String>> attrValueMap = new HashMap();
+        ArrayList<String> one = new ArrayList<>();
+        attrValueMap.put("top",one);
+
+        ArrayList<String> two = new ArrayList<>();
+        attrValueMap.put("person",one);
+
+
 
     }
 

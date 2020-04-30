@@ -11,8 +11,16 @@ import java.util.stream.Collectors;
 public class SteamDemo {
 
     public static void main(String[] args) {
-
-
+        String url = "/silkworm/job/1";
+        String appName = "";
+        String pathUrl = "";
+        if(url.startsWith("/")){
+            url = url.substring(1);
+        }
+        appName = url.substring(0,url.indexOf("/"));
+        pathUrl = url.substring(url.indexOf("/") + 1);
+        System.out.println(appName);
+        System.out.println(pathUrl);
 
     }
 

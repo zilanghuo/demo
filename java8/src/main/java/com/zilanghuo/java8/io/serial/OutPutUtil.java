@@ -1,9 +1,6 @@
 package com.zilanghuo.java8.io.serial;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
+import java.io.*;
 
 /**
  * @author laiwufa
@@ -27,6 +24,21 @@ public class OutPutUtil {
         } catch (Exception e) {
             System.out.println(e);
         }
+    }
+
+    public static void write(File file, InputStream inputStream) throws Exception{
+        OutputStream outputStream = new FileOutputStream(file);
+        outputStream.write(inputStream.read());
+        outputStream.flush();
+        outputStream.flush();
+
+    }
+
+    public static void main(String[] args) throws Exception {
+        File file = new File("/Users/admin/Desktop/avatar/test/a.txt");
+        InputStream in = new BufferedInputStream(new FileInputStream(file));
+        //write(new File("/Users/admin/Desktop/avatar/test/b.txt"),in);
+        NioInputUtil.copyFileUsingFileStreams(file,new File("/Users/admin/Desktop/avatar/test/b.txt"));
     }
 
 }
