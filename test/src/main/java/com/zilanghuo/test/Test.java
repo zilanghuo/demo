@@ -37,14 +37,26 @@ public class Test {
 
     }
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args)  {
+        try {
+            String cmd = String.format("/Users/admin/Downloads/kettle/data-integration/kitchen.sh -file=/Users/admin/Desktop/yarn_job_param_test.kjb -logfile=/Users/admin/Desktop/120684_test-kettle.log -level 'Debug' -param:instId=\"181608 00\"");
+            String cmd2 = String.format("/bin/bash -c /Users/admin/Downloads/kettle/data-integration/kitchen.sh -file=/Users/admin/Desktop/yarn_job_param_test.kjb -logfile=/Users/admin/Desktop/120681_test-kettle.log -level 'Debug' -param:instId=\"181608 00\"");
+            System.out.println(cmd);
+            //ProcessBuilder pb = new ProcessBuilder("/bin/sh", "-c",killCommand);
+            //Process process = pb.start();
+            //int errCode = process.waitFor();
+            //System.out.println(errCode);
+            //String[] aa = new String[]{"/bin/bash","-c","-param:instId=1020 01",cmd};
+             String[] aa = new String[]{"/bin/sh","-c",cmd};
 
-        TreeMap<BigDecimal, String> map = new TreeMap();
-        map.put(BigDecimal.TEN, "1");
-        map.put(BigDecimal.ZERO, "2");
-        map.put(new BigDecimal(11), "3");
-        map.put(new BigDecimal(9), "4");
-        System.out.println(map.get(map.lastKey()));
+            Process process = Runtime.getRuntime().exec(aa,null,null);
+            //Process process = Runtime.getRuntime().exec(cmd2,null,null);
+
+            process.waitFor();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
     }
 
     static int test() {
