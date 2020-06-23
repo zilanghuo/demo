@@ -1,7 +1,12 @@
 package com.zilanghuo.test;
 
 import cn.hutool.json.JSONUtil;
+import jdk.internal.util.xml.impl.Input;
 
+import java.io.File;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.PrintStream;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
@@ -39,20 +44,26 @@ public class Test {
 
     public static void main(String[] args)  {
         try {
-            String cmd = String.format("/Users/admin/Downloads/kettle/data-integration/kitchen.sh -file=/Users/admin/Desktop/yarn_job_param_test.kjb -logfile=/Users/admin/Desktop/120684_test-kettle.log -level 'Debug' -param:instId=\"181608 00\"");
-            String cmd2 = String.format("/bin/bash -c /Users/admin/Downloads/kettle/data-integration/kitchen.sh -file=/Users/admin/Desktop/yarn_job_param_test.kjb -logfile=/Users/admin/Desktop/120681_test-kettle.log -level 'Debug' -param:instId=\"181608 00\"");
+            String cmd = String.format("/Users/admin/Downloads/kettle/data-integration/kitchen.sh -logfile=/Users/admin/Desktop/120681_test-kettle.log -file=/Users/admin/Desktop/yarn_job_param_test.kjb -level 'Debug' -param:instId=\"181608 00\"");
+            String cmd2 = String.format("/bin/bash -c /Users/admin/Downloads/kettle/data-integration/kitchen.sh -file=/Users/admin/Desktop/yarn_job_param_test.kjb -logfile=/Users/admin/Desktop/120681_test-kettle.log -level 'Debug' -param:instId=181608");
+            String cmd3 = "/bin/sh /Users/admin/Desktop/test.sh ";
+
+
             System.out.println(cmd);
             //ProcessBuilder pb = new ProcessBuilder("/bin/sh", "-c",killCommand);
             //Process process = pb.start();
             //int errCode = process.waitFor();
             //System.out.println(errCode);
             //String[] aa = new String[]{"/bin/bash","-c","-param:instId=1020 01",cmd};
-             String[] aa = new String[]{"/bin/sh","-c",cmd};
+            String[] aa = new String[]{"/bin/sh",cmd3};
 
-            Process process = Runtime.getRuntime().exec(aa,null,null);
+            Process process = Runtime.getRuntime().exec(cmd3,null,null);
             //Process process = Runtime.getRuntime().exec(cmd2,null,null);
 
             process.waitFor();
+            OutputStream outputStream = process.getOutputStream();
+            InputStream inputStream = process.getErrorStream();
+            System.out.println(">.");
         }catch (Exception e){
             e.printStackTrace();
         }
