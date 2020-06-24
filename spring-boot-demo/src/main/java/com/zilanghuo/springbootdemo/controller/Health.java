@@ -1,7 +1,8 @@
 package com.zilanghuo.springbootdemo.controller;
 
 import com.zilanghuo.springbootdemo.model.User;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -13,8 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @Scope("singleton")
-@Slf4j
 public class Health {
+
+    private static final Logger log = LoggerFactory.getLogger(Health.class);
 
     @RequestMapping(value = "/health2/check")
     @ResponseBody

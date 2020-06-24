@@ -1,18 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <pattern>%date{[yyyy-MM-dd] HH:mm:ss.SSS} demo-%X{traceId} [%thread]-[%file:%line]-[%level] %msg%n
             </pattern>
         </encoder>
     </appender>
+
+    <!-- This is the kafkaAppender -->
+    <appender name="kafkaAppender" class="com.github.danielwegener.logback.kafka.KafkaAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+        <topic>operationLog</topic>
+        <keyingStrategy class="com.github.danielwegener.logback.kafka.keying.NoKeyKeyingStrategy" />
+        <deliveryStrategy class="com.github.danielwegener.logback.kafka.delivery.AsynchronousDeliveryStrategy" />
+
+        <!-- Optional parameter to use a fixed partition -->
+        <!-- <partition>0</partition> -->
+
+        <!-- Optional parameter to include log timestamps into the kafka message -->
+        <!-- <appendTimestamp>true</appendTimestamp> -->
+
+        <!-- each <producerConfig> translates to regular kafka-client config (format: key=value) -->
+        <!-- producer configs are documented here: https://kafka.apache.org/documentation.html#newproducerconfigs -->
+        <!-- bootstrap.servers is the only mandatory producerConfig -->
+        <producerConfig>bootstrap.servers=nn205.uat.yonghui.cn:9092</producerConfig>
+        <producerConfig>security.protocol=SASL_PLAINTEXT</producerConfig>
+        <producerConfig>sasl.kerberos.service.name=kafka</producerConfig>
+        <producerConfig>sasl.mechanism=GSSAPI</producerConfig>
+        <producerConfig>acks=1</producerConfig>
+        <producerConfig>client.id=CCS-test</producerConfig>
+        <!-- this is the fallback appender if kafka is not available. -->
+        <appender-ref ref="STDOUT" />
+    </appender>
+
     <logger name="org.springframework" level="ERROR"/>
     <logger name="org.springframework.web.servlet.DispatcherServlet" level="ERROR"/>
     <logger name="org.apache.commons" level="INFO"/>
     <logger name="org.springframework.web.context.support.XmlWebApplicationContext" level="ERROR"/>
     <logger name="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping" level="ERROR"/>
     <logger name="rg.apache.catalina.core.ContainerBase" level="INFO"/>
+
     <root level="INFO">
-        <appender-ref ref="stdout"/>
+        <appender-ref ref="kafkaAppender"/>
+        <appender-ref ref="STDOUT"/>
     </root>
 </configuration>

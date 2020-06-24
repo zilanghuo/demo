@@ -10,16 +10,14 @@ import java.util.Properties;
 /**
  * Created by laiwufa on 2020-06-23
  */
-public class KafkaConsumerKerberos {
+public class KafkaConsumerNoKerberos {
 
     public static void main(String[] args) {
         //在本地中设置JAAS
-        System.setProperty("java.security.auth.login.config", "/Users/admin/Documents/officeFile/kafka/kafka_client_jaas.conf");
-        System.setProperty("java.security.krb5.conf", "/Users/admin/Documents/officeFile/kafka/krb5.conf");
 
         Properties props = new Properties();
         // 定义kakfa 服务的地址，不需要将所有broker指定上
-        props.put("bootstrap.servers", "nn205.uat.yonghui.cn:9092,nn206.uat.yonghui.cn:9092");
+        props.put("bootstrap.servers", "127.0.0.1:9092");
         // 制定consumer group
          props.put("group.id", "hhtest");
         // 是否自动确认offset
@@ -31,9 +29,6 @@ public class KafkaConsumerKerberos {
         props.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         // value的序列化类
         props.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
-        props.put("security.protocol", "SASL_PLAINTEXT");
-        props.put("sasl.kerberos.service.name", "kafka");
-        props.put("sasl.mechanism", "GSSAPI");
 
         // 定义consumer
         KafkaConsumer<String, String> consumer = new KafkaConsumer<String, String>(props);
@@ -45,10 +40,9 @@ public class KafkaConsumerKerberos {
             System.out.println("--");
             // 读取数据，读取超时时间为100ms
             ConsumerRecords<String, String> records = consumer.poll(1000);
-
-            for (ConsumerRecord<String, String> record : records)
-
+            for (ConsumerRecord<String, String> record : records) {
                 System.out.printf("partition = %s, offset = %d, key = %s, value = %s%n",record.partition(), record.offset(), record.key(), record.value());
+            }
         }
     }
 }
