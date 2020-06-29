@@ -8,8 +8,8 @@ import org.springframework.context.annotation.ComponentScan;
 public class SpringBootDemoApplication {
 
     public static void main(String[] args) {
-        System.setProperty("java.security.auth.login.config", "/Users/admin/Documents/officeFile/kafka/kafka_client_jaas.conf");
-        System.setProperty("java.security.krb5.conf", "/Users/admin/Documents/officeFile/kafka/krb5.conf");
+      //  System.setProperty("java.security.auth.login.config", "/Users/admin/Documents/officeFile/kafka/kafka_client_jaas.conf");
+      //  System.setProperty("java.security.krb5.conf", "/Users/admin/Documents/officeFile/kafka/krb5.conf");
         SpringApplication.run(SpringBootDemoApplication.class, args);
     }
 

@@ -16,21 +16,14 @@
         <keyingStrategy class="com.github.danielwegener.logback.kafka.keying.NoKeyKeyingStrategy" />
         <deliveryStrategy class="com.github.danielwegener.logback.kafka.delivery.AsynchronousDeliveryStrategy" />
 
-        <!-- Optional parameter to use a fixed partition -->
-        <!-- <partition>0</partition> -->
-
-        <!-- Optional parameter to include log timestamps into the kafka message -->
-        <!-- <appendTimestamp>true</appendTimestamp> -->
-
-        <!-- each <producerConfig> translates to regular kafka-client config (format: key=value) -->
-        <!-- producer configs are documented here: https://kafka.apache.org/documentation.html#newproducerconfigs -->
-        <!-- bootstrap.servers is the only mandatory producerConfig -->
-        <producerConfig>bootstrap.servers=nn205.uat.yonghui.cn:9092</producerConfig>
-        <producerConfig>security.protocol=SASL_PLAINTEXT</producerConfig>
+        <producerConfig>bootstrap.servers=127.0.0.1:9092</producerConfig>
+        <!--<producerConfig>security.protocol=SASL_PLAINTEXT</producerConfig>
         <producerConfig>sasl.kerberos.service.name=kafka</producerConfig>
-        <producerConfig>sasl.mechanism=GSSAPI</producerConfig>
+        <producerConfig>sasl.mechanism=GSSAPI</producerConfig>-->
         <producerConfig>acks=1</producerConfig>
         <producerConfig>client.id=CCS-test</producerConfig>
+        <producerConfig>request.timeout.ms=60000</producerConfig>
+        <producerConfig>retries=3</producerConfig>
         <!-- this is the fallback appender if kafka is not available. -->
         <appender-ref ref="STDOUT" />
     </appender>
