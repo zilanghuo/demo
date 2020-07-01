@@ -1,10 +1,7 @@
 package com.zilanghuo.test.hdfs;
 
 import org.apache.hadoop.conf.Configuration;
-import org.apache.hadoop.fs.FSDataInputStream;
-import org.apache.hadoop.fs.FSDataOutputStream;
-import org.apache.hadoop.fs.FileSystem;
-import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.fs.*;
 import org.apache.hadoop.fs.permission.FsPermission;
 import org.junit.Test;
 
@@ -20,7 +17,7 @@ public class HdfsClientUtil {
 
     private static final String HDFS_USER = "admin";
 
-    private static final String PREFIX_PATH = "/user/admin";
+    private static final String PREFIX_PATH = "/user/admin/silkworm-work/logs/10.0.90.57/2020-06-18";
 
     private static FileSystem fileSystem;
 
@@ -38,6 +35,12 @@ public class HdfsClientUtil {
     public void createDir() throws IOException {
         Path path = new Path(PREFIX_PATH);
         fileSystem.mkdirs(path, FsPermission.getDefault());
+    }
+
+    @Test
+    public void deleteFile() throws IOException {
+        Path path = new Path(PREFIX_PATH);
+        fileSystem.delete(path, true);
     }
 
     /**
@@ -60,7 +63,8 @@ public class HdfsClientUtil {
 
     @Test
     public void read() throws Exception{
-        FSDataInputStream inputStream = fileSystem.open(new Path(PREFIX_PATH+"/gen_parameteer_rec.ktr"));
+        // FSDataInputStream inputStream = fileSystem.open(new Path(PREFIX_PATH+"/gen_parameteer_rec.ktr"));
+        FSDataInputStream inputStream = fileSystem.open(new Path("/user/admin/silkworm-work/logs/10.0.90.57/2020-06-18/121635_task-param1_2020-06-18.log"));
         String context = inputStreamToString(inputStream, "utf-8");
         System.out.println(context);
 
@@ -68,14 +72,14 @@ public class HdfsClientUtil {
 
     @Test
     public void isFile() throws Exception{
-        boolean file = fileSystem.isFile(new Path(PREFIX_PATH));
+        boolean file = fileSystem.isFile(new Path(PREFIX_PATH+"/121635_task-param1_2020-06-18.stdout"));
         System.out.println(file);
     }
 
     @Test
     public void copyFromLocalFile() throws Exception {
         // 如果指定的是目录，则会把目录及其中的文件都复制到指定目录下
-        Path src = new Path("/Users/admin/Desktop/gen_parameteer_rec.ktr");
+        Path src = new Path("/Users/admin/Documents/121635_task-param1_2020-06-18.error");
         Path dst = new Path(PREFIX_PATH);
         fileSystem.copyFromLocalFile(src, dst);
     }
@@ -92,6 +96,14 @@ public class HdfsClientUtil {
          * 此时可以将 RawLocalFileSystem 设置为 true
          */
         fileSystem.copyToLocalFile(false, src, dst, true);
+    }
+
+    @Test
+    public void ls() throws Exception {
+        FileStatus[] fileStatuses = fileSystem.listStatus(new Path(PREFIX_PATH));
+        for (int i = 0; i < fileStatuses.length; i++) {
+            System.out.println(fileStatuses[i].getPath().getName());
+        }
     }
 
     /**

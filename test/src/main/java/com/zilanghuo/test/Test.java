@@ -20,6 +20,16 @@ import java.util.TreeMap;
 public class Test {
 
     @org.junit.Test
+    public void testThree() {
+        String str = "/home/duyiping/tasklogs/121967_task-priority2.3_2020-06-29.log";
+        String exe = "10.0.90.57:9090";
+        System.out.println(exe.substring(0,exe.lastIndexOf(":")));
+        System.out.println(str.substring(str.lastIndexOf("/") + 1));
+        System.out.println(str.substring(str.length() - 14,str.length() - 4));
+
+    }
+
+    @org.junit.Test
     public  void testTwo() throws Exception{
         Date dateline = new Date();
         Thread.sleep(1000);
