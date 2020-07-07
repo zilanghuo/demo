@@ -24,7 +24,6 @@
         <module>spi</module>
         <module>java8</module>
         <module>netty</module>
-        <module>log</module>
         <module>apm-agent</module>
         <module>queue</module>
         <module>queue-code</module>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
+    <include resource="com/zilanghuo/log/kafka.xml"/>
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <pattern>%date{[yyyy-MM-dd] HH:mm:ss.SSS} demo-%X{traceId} [%thread]-[%file:%line]-[%level] %msg%n
@@ -7,26 +8,6 @@
         </encoder>
     </appender>
 
-    <!-- This is the kafkaAppender -->
-    <appender name="kafkaAppender" class="com.github.danielwegener.logback.kafka.KafkaAppender">
-        <encoder>
-            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
-        </encoder>
-        <topic>operationLog</topic>
-        <keyingStrategy class="com.github.danielwegener.logback.kafka.keying.NoKeyKeyingStrategy" />
-        <deliveryStrategy class="com.github.danielwegener.logback.kafka.delivery.AsynchronousDeliveryStrategy" />
-
-        <producerConfig>bootstrap.servers=127.0.0.1:9092</producerConfig>
-        <!--<producerConfig>security.protocol=SASL_PLAINTEXT</producerConfig>
-        <producerConfig>sasl.kerberos.service.name=kafka</producerConfig>
-        <producerConfig>sasl.mechanism=GSSAPI</producerConfig>-->
-        <producerConfig>acks=1</producerConfig>
-        <producerConfig>client.id=CCS-test</producerConfig>
-        <producerConfig>request.timeout.ms=60000</producerConfig>
-        <producerConfig>retries=3</producerConfig>
-        <!-- this is the fallback appender if kafka is not available. -->
-        <appender-ref ref="STDOUT" />
-    </appender>
 
     <logger name="org.springframework" level="ERROR"/>
     <logger name="org.springframework.web.servlet.DispatcherServlet" level="ERROR"/>
