@@ -11,8 +11,8 @@ public class DateUtils {
     public static void main(String[] args) {
 
         Calendar instance = Calendar.getInstance();
-        instance.setTimeInMillis(1551628800009L);
-        System.out.println(instance.getTime());
+        instance.setTimeInMillis(1594030379000L);
+        System.out.println(instance);
 
         instance.setTimeInMillis(1551715199009L);
         System.out.println(instance.getTime());
@@ -21,5 +21,7 @@ public class DateUtils {
         System.out.println(instance.getTime());
 
     }
+
+
 
 }

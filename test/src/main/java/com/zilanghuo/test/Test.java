@@ -1,17 +1,9 @@
 package com.zilanghuo.test;
 
-import cn.hutool.json.JSONUtil;
-import jdk.internal.util.xml.impl.Input;
-
-import java.io.File;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.io.PrintStream;
-import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.Objects;
-import java.util.TreeMap;
 
 /**
  * @author laiwufa
@@ -40,16 +32,6 @@ public class Test {
         }else{
             System.out.println("3");
         }
-    }
-
-    @org.junit.Test
-    public void testOne() {
-        ArrayList list = new ArrayList();
-        list.add(1);
-        list.add(2);
-        list.add(1, 1);
-        System.out.println(JSONUtil.toJsonStr(list));
-
     }
 
     public static void main(String[] args)  {
