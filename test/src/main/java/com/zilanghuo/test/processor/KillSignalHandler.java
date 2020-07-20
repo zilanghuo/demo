@@ -14,10 +14,8 @@ public class KillSignalHandler implements SignalHandler {
         String name = signal.getName();
         // 信号量数值
         int number = signal.getNumber();
-
         // 当前进程名
         String currentThreadName = Thread.currentThread().getName();
-
         System.out.println("[Thread:"+currentThreadName + "] receved signal: " + name + " == kill -" + number);
         if(name.equals("TERM")){
             System.exit(0);
