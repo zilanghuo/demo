@@ -4,12 +4,21 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Date;
 import java.util.Objects;
+import java.util.regex.Pattern;
 
 /**
  * @author laiwufa
  * @date 2019/3/14 0014 下午 3:43
  */
 public class Test {
+
+    @org.junit.Test
+    public void pattern(){
+        String str = ".*/notice.*";
+        String request = "/notice/get/all";
+        boolean isMatch = Pattern.matches(str,request);
+        System.out.println("字符串中是否包含了 'runoob' 子字符串? " + isMatch);
+    }
 
     @org.junit.Test
     public void testThree() {
