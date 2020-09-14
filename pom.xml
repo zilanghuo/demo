@@ -37,6 +37,7 @@
         <module>Hadoop</module>
         <module>springcloud</module>
         <module>sofademo</module>
+        <module>testOne</module>
     </modules>
 
     <dependencies>

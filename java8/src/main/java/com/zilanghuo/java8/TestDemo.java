@@ -5,6 +5,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.junit.Test;
 
+import java.math.BigDecimal;
+import java.math.MathContext;
+import java.math.RoundingMode;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -32,21 +35,11 @@ public class TestDemo {
 
     @Test
     public void testList() throws Exception{
-        List<String> list = new ArrayList(4);
-        list.add("1");
-        list.add("1");
-        list.add("1");
-        list.add("1");
-        System.out.println(list.size());
-        Iterator<String> iterator = list.iterator();
-        while (iterator.hasNext()){
-            System.out.println(iterator.next());
-        }
+        MathContext mc = new MathContext(2, RoundingMode.HALF_UP);
 
-        Iterator<String> iterator1 = list.iterator();
-        while (iterator1.hasNext()){
-            System.out.println(iterator1.next());
-        }
+        BigDecimal bigDecimal = BigDecimal.valueOf(10000);
+        BigDecimal divisor = BigDecimal.valueOf(122);
+        System.out.println(bigDecimal.divide(divisor,0,RoundingMode.HALF_UP).longValue());
 
 
     }

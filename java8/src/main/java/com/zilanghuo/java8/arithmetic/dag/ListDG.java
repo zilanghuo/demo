@@ -329,7 +329,7 @@ public class ListDG {
     }
 
     public static void main(String[] args) {
-        char[] vexs = {'0', '1', '2', '3', '4', '5', '6', '7'};
+       /* char[] vexs = {'0', '1', '2', '3', '4', '5', '6', '7'};
         char[][] edges = new char[][]{
                 {'0', '3'},
                 {'0', '4'},
@@ -337,6 +337,8 @@ public class ListDG {
                 {'3', '5'},
                 {'5', '7'},
                 {'6', '7'}};
+
+
         ListDG pG;
 
         // 自定义"图"(输入矩阵队列)
@@ -349,7 +351,8 @@ public class ListDG {
         //pG.BFS();     // 广度优先遍历
         pG.topologicalSort();     // 拓扑排序    }
         pG.DFS();
-        pG.BFS();
+        pG.BFS();*/
+       demoOne();
     }
     private static void demoOne() {
         char[] vexs = {'A', 'B', 'C', 'D', 'E', 'F', 'G'};
@@ -370,7 +373,7 @@ public class ListDG {
 
         pG.print();   // 打印图
         //pG.DFS();     // 深度优先遍历
-        //pG.BFS();     // 广度优先遍历
+        pG.BFS();     // 广度优先遍历
         pG.topologicalSort();     // 拓扑排序
     }
 

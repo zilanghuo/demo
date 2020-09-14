@@ -14,10 +14,8 @@ public class Test {
 
     @org.junit.Test
     public void pattern(){
-        String str = ".*/notice.*";
-        String request = "/notice/get/all";
-        boolean isMatch = Pattern.matches(str,request);
-        System.out.println("字符串中是否包含了 'runoob' 子字符串? " + isMatch);
+        String s = "2019-04-28 18:05:36.0";
+        System.out.println(s.substring(0,19));
     }
 
     @org.junit.Test
@@ -43,33 +41,6 @@ public class Test {
         }
     }
 
-    public static void main(String[] args)  {
-        try {
-            String cmd = String.format("/Users/admin/Downloads/kettle/data-integration/kitchen.sh -logfile=/Users/admin/Desktop/120681_test-kettle.log -file=/Users/admin/Desktop/yarn_job_param_test.kjb -level 'Debug' -param:instId=\"181608 00\"");
-            String cmd2 = String.format("/bin/bash -c /Users/admin/Downloads/kettle/data-integration/kitchen.sh -file=/Users/admin/Desktop/yarn_job_param_test.kjb -logfile=/Users/admin/Desktop/120681_test-kettle.log -level 'Debug' -param:instId=181608");
-            String cmd3 = "/bin/sh /Users/admin/Desktop/test.sh ";
-
-
-            System.out.println(cmd);
-            //ProcessBuilder pb = new ProcessBuilder("/bin/sh", "-c",killCommand);
-            //Process process = pb.start();
-            //int errCode = process.waitFor();
-            //System.out.println(errCode);
-            //String[] aa = new String[]{"/bin/bash","-c","-param:instId=1020 01",cmd};
-            String[] aa = new String[]{"/bin/sh",cmd3};
-
-            Process process = Runtime.getRuntime().exec(cmd3,null,null);
-            //Process process = Runtime.getRuntime().exec(cmd2,null,null);
-
-            process.waitFor();
-            OutputStream outputStream = process.getOutputStream();
-            InputStream inputStream = process.getErrorStream();
-            System.out.println(">.");
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-
-    }
 
     static int test() {
         int i = 0;
