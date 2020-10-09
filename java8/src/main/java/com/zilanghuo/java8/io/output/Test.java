@@ -9,7 +9,28 @@ import java.io.*;
 public class Test {
 
     public static void main(String[] args) throws Exception {
-        inputTest();
+        // inputStr("nidaf你好","/Users/admin/Desktop/logs/b.sql");
+        System.out.println(getContent("/Users/admin/Desktop/logs/b.sql"));
+    }
+
+    private static String getContent(String filePath) throws Exception{
+        FileInputStream inputStream = new FileInputStream(filePath);
+        BufferedReader reader  = new BufferedReader(new InputStreamReader(inputStream));
+        StringBuilder builder = new StringBuilder();
+        String line;
+        while (( line = reader.readLine()) != null){
+            builder.append("\n").append(line);
+        }
+        reader.close();
+        inputStream.close();
+        return builder.toString().substring(1);
+    }
+
+    private static void inputStr(String str,String filePath) throws Exception{
+        FileOutputStream  out = new FileOutputStream(filePath,false);
+        out.write(str.getBytes());
+        out.flush();
+        out.close();
     }
 
     private static void inputTest() throws IOException {

@@ -35,11 +35,9 @@ public class TestDemo {
 
     @Test
     public void testList() throws Exception{
-        MathContext mc = new MathContext(2, RoundingMode.HALF_UP);
+        String aa = "/home/duyiping/silkworm-api/testscripts/2780/version-20200904174808-test02-1599212888424-4e7149c/param_test_A.py";
+        System.out.println(aa.substring(aa.lastIndexOf("/")+1));
 
-        BigDecimal bigDecimal = BigDecimal.valueOf(10000);
-        BigDecimal divisor = BigDecimal.valueOf(122);
-        System.out.println(bigDecimal.divide(divisor,0,RoundingMode.HALF_UP).longValue());
 
 
     }
