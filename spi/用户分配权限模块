@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-10-26T10:10:27.175Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" etag="5cCF-3uyGaAuUDNo751o" version="13.8.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2020-10-26T10:19:58.189Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" etag="h_a1YI4ZPVidV_vncg6D" version="13.8.2" type="github" pages="2">
   <diagram id="fr02PTJREw938rj9sSep" name="菜单权限">
     <mxGraphModel dx="1251" dy="729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="2900" math="0" shadow="0">
       <root>
@@ -393,7 +393,18 @@
         <mxCell id="vc9PAzSQwNd6q7gQE_6w-21" value="用户管理" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fontSize=16;" vertex="1" parent="3CgyL2CUGL48x9yzQYae-1">
           <mxGeometry x="660" y="930" width="100" height="540" as="geometry" />
         </mxCell>
-        <mxCell id="vc9PAzSQwNd6q7gQE_6w-28" value="鉴权结果" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;fontSize=16;" edge="1" parent="3CgyL2CUGL48x9yzQYae-1" target="vc9PAzSQwNd6q7gQE_6w-20">
+        <mxCell id="vc9PAzSQwNd6q7gQE_6w-30" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fontSize=16;" vertex="1" parent="vc9PAzSQwNd6q7gQE_6w-21">
+          <mxGeometry x="45" y="310" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vc9PAzSQwNd6q7gQE_6w-31" value="缓存认证" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;entryX=1;entryY=0;fontSize=16;" edge="1" target="vc9PAzSQwNd6q7gQE_6w-30" parent="vc9PAzSQwNd6q7gQE_6w-21">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="50" y="290" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="75" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vc9PAzSQwNd6q7gQE_6w-28" value="鉴权结果" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;fontSize=16;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="3CgyL2CUGL48x9yzQYae-1" source="vc9PAzSQwNd6q7gQE_6w-30" target="vc9PAzSQwNd6q7gQE_6w-20">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="710" y="1260" as="sourcePoint" />
             <mxPoint x="630" y="1260" as="targetPoint" />
