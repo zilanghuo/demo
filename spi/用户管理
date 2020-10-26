@@ -1,9 +1,81 @@
-<mxfile host="app.diagrams.net" modified="2020-10-26T06:53:55.670Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" etag="2J0DGOLZLOXCsbse1m1y" version="13.8.2" type="github">
+<mxfile host="app.diagrams.net" modified="2020-10-26T07:19:22.625Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" etag="GOwGjhIMiQRQh-8sdhIR" version="13.8.2" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="1541" dy="848" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1920" math="0" shadow="0">
+    <mxGraphModel dx="1251" dy="729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1920" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="udFuD_b26fbtpF-bZmlE-35" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="260" y="600" width="570" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="udFuD_b26fbtpF-bZmlE-36" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="510" y="620" width="90" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="udFuD_b26fbtpF-bZmlE-22" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="500" y="40" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="udFuD_b26fbtpF-bZmlE-25" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="370" y="180" width="320" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="udFuD_b26fbtpF-bZmlE-27" value="Nginx 负载均衡" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="465" y="190" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="udFuD_b26fbtpF-bZmlE-28" value="前端ui" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="420" y="240" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="udFuD_b26fbtpF-bZmlE-29" value="前端ui" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="540" y="240" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="udFuD_b26fbtpF-bZmlE-30" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="370" y="400" width="320" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="udFuD_b26fbtpF-bZmlE-31" value="网关服务GateWay" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="460" y="410" width="110" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="udFuD_b26fbtpF-bZmlE-32" value="网关路由" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="420" y="460" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="udFuD_b26fbtpF-bZmlE-34" value="网关路由" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="540" y="460" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="udFuD_b26fbtpF-bZmlE-39" value="离线模块" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="520" y="640" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="udFuD_b26fbtpF-bZmlE-41" value="离线模块" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="520" y="710" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="udFuD_b26fbtpF-bZmlE-43" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="370" y="620" width="90" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="udFuD_b26fbtpF-bZmlE-44" value="用户管理" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="380" y="640" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="udFuD_b26fbtpF-bZmlE-46" value="用户管理" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="380" y="710" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="udFuD_b26fbtpF-bZmlE-47" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="650" y="620" width="90" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="udFuD_b26fbtpF-bZmlE-48" value="XXX" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="660" y="640" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="udFuD_b26fbtpF-bZmlE-54" value="XXX" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="660" y="710" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="udFuD_b26fbtpF-bZmlE-55" value="Scheduler(高可用实时调度)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="300" y="780" width="490" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="udFuD_b26fbtpF-bZmlE-56" value="Redis(缓存)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="300" y="820" width="490" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="udFuD_b26fbtpF-bZmlE-57" value="RPC智能化路由" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="300" y="870" width="490" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="udFuD_b26fbtpF-bZmlE-58" value="Docker + K8s" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="300" y="920" width="490" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="udFuD_b26fbtpF-bZmlE-59" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="920" y="520" width="120" height="440" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
