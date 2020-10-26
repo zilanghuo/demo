@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-10-26T07:51:30.465Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" etag="ErpKQg3cWVjJrLxLJ-Ux" version="13.8.2" type="github">
+<mxfile host="app.diagrams.net" modified="2020-10-26T07:51:58.293Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" etag="WD4Rqx7T7ynZ8WvrXP8P" version="13.8.2" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1251" dy="729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1920" math="0" shadow="0">
       <root>
@@ -61,16 +61,16 @@
         <mxCell id="udFuD_b26fbtpF-bZmlE-54" value="XXX" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="710" y="710" width="70" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="udFuD_b26fbtpF-bZmlE-55" value="Scheduler(高可用实时调度)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="udFuD_b26fbtpF-bZmlE-55" value="Scheduler(高可用实时调度)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="300" y="780" width="490" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="udFuD_b26fbtpF-bZmlE-56" value="Redis(缓存)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="udFuD_b26fbtpF-bZmlE-56" value="Redis(缓存)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="300" y="820" width="490" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="udFuD_b26fbtpF-bZmlE-57" value="RPC智能化路由" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="udFuD_b26fbtpF-bZmlE-57" value="RPC智能化路由" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="300" y="870" width="490" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="udFuD_b26fbtpF-bZmlE-58" value="Docker + K8s" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="udFuD_b26fbtpF-bZmlE-58" value="Docker + K8s" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="300" y="920" width="490" height="30" as="geometry" />
         </mxCell>
         <mxCell id="udFuD_b26fbtpF-bZmlE-59" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
