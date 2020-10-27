@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-10-27T06:29:38.112Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" etag="xVuP2H8x3-lM7ePOmI1G" version="13.8.3" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2020-10-27T06:42:25.035Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" etag="lTKglVUSPQHfP3qRPBFL" version="13.8.3" type="github" pages="6">
   <diagram id="fr02PTJREw938rj9sSep" name="菜单权限">
     <mxGraphModel dx="1251" dy="729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="2900" math="0" shadow="0">
       <root>
@@ -729,6 +729,72 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="490" y="500" as="sourcePoint" />
             <mxPoint x="410" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="2vclBWI79jhU4LUxte8B" name="角色模块">
+    <mxGraphModel dx="1251" dy="729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="2900" math="0" shadow="0">
+      <root>
+        <mxCell id="Uzgt-vrEI7CuovM4olfG-0" />
+        <mxCell id="Uzgt-vrEI7CuovM4olfG-1" parent="Uzgt-vrEI7CuovM4olfG-0" />
+        <mxCell id="Uzgt-vrEI7CuovM4olfG-2" value="新建组织" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=19;" vertex="1" parent="Uzgt-vrEI7CuovM4olfG-1">
+          <mxGeometry x="60" y="30" width="80" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Uzgt-vrEI7CuovM4olfG-3" value="平台管理员" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fontSize=19;" vertex="1" parent="Uzgt-vrEI7CuovM4olfG-1">
+          <mxGeometry x="160" y="80" width="100" height="590" as="geometry" />
+        </mxCell>
+        <mxCell id="Uzgt-vrEI7CuovM4olfG-5" value="创建组织" style="html=1;verticalAlign=bottom;endArrow=block;fontSize=19;" edge="1" parent="Uzgt-vrEI7CuovM4olfG-3" target="Uzgt-vrEI7CuovM4olfG-4">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="50" y="90" as="sourcePoint" />
+            <mxPoint x="130" y="90" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uzgt-vrEI7CuovM4olfG-4" value="用户模块" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fontSize=19;" vertex="1" parent="Uzgt-vrEI7CuovM4olfG-1">
+          <mxGeometry x="460" y="80" width="100" height="590" as="geometry" />
+        </mxCell>
+        <mxCell id="Uzgt-vrEI7CuovM4olfG-6" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fontSize=19;" vertex="1" parent="Uzgt-vrEI7CuovM4olfG-4">
+          <mxGeometry x="45" y="130" width="10" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Uzgt-vrEI7CuovM4olfG-7" value="选择所有者" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;entryX=1;entryY=0;fontSize=19;" edge="1" target="Uzgt-vrEI7CuovM4olfG-6" parent="Uzgt-vrEI7CuovM4olfG-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="50" y="110" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="75" y="110" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uzgt-vrEI7CuovM4olfG-12" value="创建组织" style="html=1;verticalAlign=bottom;endArrow=block;fontSize=19;" edge="1" parent="Uzgt-vrEI7CuovM4olfG-4" target="Uzgt-vrEI7CuovM4olfG-10">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="50" y="180" as="sourcePoint" />
+            <mxPoint x="130" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uzgt-vrEI7CuovM4olfG-14" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fontSize=19;" vertex="1" parent="Uzgt-vrEI7CuovM4olfG-4">
+          <mxGeometry x="45" y="300" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Uzgt-vrEI7CuovM4olfG-15" value="落地" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;entryX=1;entryY=0;fontSize=19;" edge="1" target="Uzgt-vrEI7CuovM4olfG-14" parent="Uzgt-vrEI7CuovM4olfG-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="50" y="280" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="75" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uzgt-vrEI7CuovM4olfG-10" value="OA系统" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fontSize=19;" vertex="1" parent="Uzgt-vrEI7CuovM4olfG-1">
+          <mxGeometry x="790" y="80" width="100" height="590" as="geometry" />
+        </mxCell>
+        <mxCell id="Uzgt-vrEI7CuovM4olfG-13" value="返回结果" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;fontSize=19;" edge="1" parent="Uzgt-vrEI7CuovM4olfG-1" target="Uzgt-vrEI7CuovM4olfG-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="840" y="320" as="sourcePoint" />
+            <mxPoint x="760" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uzgt-vrEI7CuovM4olfG-16" value="返回结果" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;fontSize=19;" edge="1" parent="Uzgt-vrEI7CuovM4olfG-1" target="Uzgt-vrEI7CuovM4olfG-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="450" as="sourcePoint" />
+            <mxPoint x="430" y="450" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
