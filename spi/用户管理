@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-11-03T02:29:02.391Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" etag="dpK9K7xZeDIW283F6f5y" version="13.8.8" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2020-11-03T07:54:40.781Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" etag="bI3CYZTvGUJUQBJrhRHx" version="13.8.8" type="github" pages="3">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="流程图">
-    <mxGraphModel dx="1251" dy="729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="2900" math="0" shadow="0">
+    <mxGraphModel dx="1251" dy="677" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="2900" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -180,7 +180,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="fCkY3NrYhKBPyPGPUVEF-0" value="用户管理" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fontSize=23;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="fCkY3NrYhKBPyPGPUVEF-0" value="网关" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fontSize=23;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="310" y="1240" width="100" height="550" as="geometry" />
         </mxCell>
         <mxCell id="fCkY3NrYhKBPyPGPUVEF-6" value="登录认证" style="html=1;verticalAlign=bottom;endArrow=block;" parent="fCkY3NrYhKBPyPGPUVEF-0" target="fCkY3NrYhKBPyPGPUVEF-3" edge="1">
@@ -198,7 +198,7 @@
             <mxPoint x="450" y="1500" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="fCkY3NrYhKBPyPGPUVEF-10" value="登录成功" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" parent="WIyWlLk6GJQsqaUBKTNV-1" target="udFuD_b26fbtpF-bZmlE-103" edge="1" source="fCkY3NrYhKBPyPGPUVEF-0">
+        <mxCell id="fCkY3NrYhKBPyPGPUVEF-10" value="登录成功" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="fCkY3NrYhKBPyPGPUVEF-0" target="udFuD_b26fbtpF-bZmlE-103" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="360" y="1620" as="sourcePoint" />
             <mxPoint x="280" y="1620" as="targetPoint" />
