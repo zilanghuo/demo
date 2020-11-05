@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-11-03T07:54:40.781Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" etag="bI3CYZTvGUJUQBJrhRHx" version="13.8.8" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2020-11-05T06:22:47.468Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" etag="9pIA1eEVl7ckTHdTTZ_U" version="13.8.8" type="github" pages="3">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="流程图">
-    <mxGraphModel dx="1251" dy="677" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="2900" math="0" shadow="0">
+    <mxGraphModel dx="1251" dy="729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="2900" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -443,7 +443,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="BxqQ4XkTwFxE1rF_3XR5" name="服务架构(包含OA)">
-    <mxGraphModel dx="1251" dy="729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="2900" math="0" shadow="0">
+    <mxGraphModel dx="1043" dy="608" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="2900" math="0" shadow="0">
       <root>
         <mxCell id="WEetXGYD1ko_HeLSCxnF-0" />
         <mxCell id="WEetXGYD1ko_HeLSCxnF-1" parent="WEetXGYD1ko_HeLSCxnF-0" />
@@ -555,7 +555,7 @@
             <mxPoint x="770" y="921.8181762695312" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="W9my-IJ8uHU8BMk_aFez-46" value="数据鉴权与操作" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;" parent="W9my-IJ8uHU8BMk_aFez-45" vertex="1" connectable="0">
+        <mxCell id="W9my-IJ8uHU8BMk_aFez-46" value="非功能权限&lt;br&gt;鉴权与操作" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;" parent="W9my-IJ8uHU8BMk_aFez-45" vertex="1" connectable="0">
           <mxGeometry x="0.0312" y="-6" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -670,13 +670,13 @@
         <mxCell id="8uuUP4BMpPanqCrtTKtJ-20" value="用户管理&lt;br&gt;后端" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" parent="WEetXGYD1ko_HeLSCxnF-1" vertex="1">
           <mxGeometry x="550" y="1670" width="110" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="8uuUP4BMpPanqCrtTKtJ-21" value="3.1 数据权限鉴权" style="html=1;verticalAlign=bottom;endArrow=block;fontSize=12;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=1.004;exitY=0.193;exitDx=0;exitDy=0;exitPerimeter=0;" parent="WEetXGYD1ko_HeLSCxnF-1" source="8uuUP4BMpPanqCrtTKtJ-14" target="8uuUP4BMpPanqCrtTKtJ-20" edge="1">
+        <mxCell id="8uuUP4BMpPanqCrtTKtJ-21" value="3.1 非功能权&lt;br&gt;据权限鉴权" style="html=1;verticalAlign=bottom;endArrow=block;fontSize=12;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=1.004;exitY=0.193;exitDx=0;exitDy=0;exitPerimeter=0;" parent="WEetXGYD1ko_HeLSCxnF-1" source="8uuUP4BMpPanqCrtTKtJ-14" target="8uuUP4BMpPanqCrtTKtJ-20" edge="1">
           <mxGeometry width="80" relative="1" as="geometry">
             <mxPoint x="400" y="1735" as="sourcePoint" />
             <mxPoint x="510" y="1840" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8uuUP4BMpPanqCrtTKtJ-24" value="3.1.1 数据权限鉴权" style="html=1;verticalAlign=bottom;endArrow=block;fontSize=12;entryX=-0.026;entryY=0.655;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WEetXGYD1ko_HeLSCxnF-1" target="8uuUP4BMpPanqCrtTKtJ-3" edge="1">
+        <mxCell id="8uuUP4BMpPanqCrtTKtJ-24" value="3.1.1 非功能权&lt;br&gt;据权限鉴权" style="html=1;verticalAlign=bottom;endArrow=block;fontSize=12;entryX=-0.026;entryY=0.655;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WEetXGYD1ko_HeLSCxnF-1" target="8uuUP4BMpPanqCrtTKtJ-3" edge="1">
           <mxGeometry width="80" relative="1" as="geometry">
             <mxPoint x="660" y="1690" as="sourcePoint" />
             <mxPoint x="740" y="1690" as="targetPoint" />
@@ -703,10 +703,10 @@
         <mxCell id="JQ3KK1wid5nBzX6QdCfn-3" value="K8S部署" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;" parent="WEetXGYD1ko_HeLSCxnF-1" vertex="1">
           <mxGeometry x="1410" y="800" width="90" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="s8A9RhqWd4jWJr2AjHik-0" value="应用管理" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WEetXGYD1ko_HeLSCxnF-1">
+        <mxCell id="s8A9RhqWd4jWJr2AjHik-0" value="应用管理" style="rounded=0;whiteSpace=wrap;html=1;" parent="WEetXGYD1ko_HeLSCxnF-1" vertex="1">
           <mxGeometry x="440" y="785" width="100" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="yEUOBZk44qnqrdKbHm2O-0" value="应用管理" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WEetXGYD1ko_HeLSCxnF-1">
+        <mxCell id="yEUOBZk44qnqrdKbHm2O-0" value="应用管理" style="rounded=0;whiteSpace=wrap;html=1;" parent="WEetXGYD1ko_HeLSCxnF-1" vertex="1">
           <mxGeometry x="440" y="785" width="100" height="50" as="geometry" />
         </mxCell>
       </root>
