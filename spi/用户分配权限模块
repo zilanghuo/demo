@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-11-02T03:38:06.585Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" etag="x7ohgAS7CXQIAVyZDOfN" version="13.8.7" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2020-11-10T07:49:23.664Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36" etag="S5_AkQyQmqu9trCymyJV" version="13.9.3" type="github" pages="7">
   <diagram id="fr02PTJREw938rj9sSep" name="菜单权限">
     <mxGraphModel dx="1251" dy="729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="2900" math="0" shadow="0">
       <root>
@@ -1052,6 +1052,77 @@
             <mxPoint x="700" y="1210" as="sourcePoint" />
             <mxPoint x="620" y="1210" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="ImmyMz1NWl0yVcaeFYQo" name="集团权限与用户管理对应">
+    <mxGraphModel dx="1251" dy="729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="2900" math="0" shadow="0">
+      <root>
+        <mxCell id="Ly_BGtkGU37H3gd4eteT-0" />
+        <mxCell id="Ly_BGtkGU37H3gd4eteT-1" parent="Ly_BGtkGU37H3gd4eteT-0" />
+        <mxCell id="Ly_BGtkGU37H3gd4eteT-2" value="规则项目" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="Ly_BGtkGU37H3gd4eteT-1">
+          <mxGeometry x="100" y="50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ly_BGtkGU37H3gd4eteT-3" value="规则明细" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="Ly_BGtkGU37H3gd4eteT-1">
+          <mxGeometry x="100" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ly_BGtkGU37H3gd4eteT-4" value="数据规则" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="Ly_BGtkGU37H3gd4eteT-1">
+          <mxGeometry x="100" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ly_BGtkGU37H3gd4eteT-5" value="数据功能权限" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="Ly_BGtkGU37H3gd4eteT-1">
+          <mxGeometry x="100" y="460" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ly_BGtkGU37H3gd4eteT-6" value="角色" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="Ly_BGtkGU37H3gd4eteT-1">
+          <mxGeometry x="100" y="580" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ly_BGtkGU37H3gd4eteT-7" value="数据权限&lt;br&gt;作业权限" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="Ly_BGtkGU37H3gd4eteT-1">
+          <mxGeometry x="460" y="50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ly_BGtkGU37H3gd4eteT-8" value="映射权限模块" style="html=1;verticalAlign=bottom;endArrow=block;fontSize=14;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="Ly_BGtkGU37H3gd4eteT-1" target="Ly_BGtkGU37H3gd4eteT-7">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="220" y="80" as="sourcePoint" />
+            <mxPoint x="300" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ly_BGtkGU37H3gd4eteT-9" value="权限类型&lt;br&gt;（读、写、DDL）" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="Ly_BGtkGU37H3gd4eteT-1">
+          <mxGeometry x="460" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ly_BGtkGU37H3gd4eteT-10" value="映射权限类型" style="html=1;verticalAlign=bottom;endArrow=block;fontSize=14;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="Ly_BGtkGU37H3gd4eteT-1" target="Ly_BGtkGU37H3gd4eteT-9">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="220" y="220" as="sourcePoint" />
+            <mxPoint x="300" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ly_BGtkGU37H3gd4eteT-11" value="资源与类型的组合" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="Ly_BGtkGU37H3gd4eteT-1">
+          <mxGeometry x="460" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ly_BGtkGU37H3gd4eteT-12" value="该明细下有多少数据规则&lt;br&gt;（该读权限 下面有多少表）" style="html=1;verticalAlign=bottom;endArrow=block;fontSize=14;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="Ly_BGtkGU37H3gd4eteT-1" target="Ly_BGtkGU37H3gd4eteT-11">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="220" y="350" as="sourcePoint" />
+            <mxPoint x="300" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ly_BGtkGU37H3gd4eteT-13" value="角色与规则的组合" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="Ly_BGtkGU37H3gd4eteT-1">
+          <mxGeometry x="460" y="460" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ly_BGtkGU37H3gd4eteT-14" value="角色与资源的关系" style="html=1;verticalAlign=bottom;endArrow=block;fontSize=14;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="Ly_BGtkGU37H3gd4eteT-1" target="Ly_BGtkGU37H3gd4eteT-13">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="220" y="490" as="sourcePoint" />
+            <mxPoint x="300" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ly_BGtkGU37H3gd4eteT-15" value="作业权限（作业规则项目）" style="text;align=left;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=14;" vertex="1" parent="Ly_BGtkGU37H3gd4eteT-1">
+          <mxGeometry x="660" y="50" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ly_BGtkGU37H3gd4eteT-16" value="读权限（读规则明细）&#xa;写权限（写规则明细）" style="text;align=left;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=14;" vertex="1" parent="Ly_BGtkGU37H3gd4eteT-1">
+          <mxGeometry x="660" y="190" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ly_BGtkGU37H3gd4eteT-17" value="选择10个作业有写权限&#xa;（在写规则明细生成10条数据规则）" style="text;align=left;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=14;" vertex="1" parent="Ly_BGtkGU37H3gd4eteT-1">
+          <mxGeometry x="660" y="320" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ly_BGtkGU37H3gd4eteT-18" value="10个作业有写权限，赋权给A角色&#xa;（10条数据规则绑定到A角色）" style="text;align=left;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=14;" vertex="1" parent="Ly_BGtkGU37H3gd4eteT-1">
+          <mxGeometry x="660" y="460" width="260" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
