@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-11-15T13:54:44.731Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.193 Safari/537.36" etag="PFnFTMP-4poV-IMgtnTL" version="13.9.8" type="github" pages="7">
+<mxfile host="app.diagrams.net" modified="2020-11-16T06:53:32.825Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.193 Safari/537.36" etag="5MXFmNr5uyk65yXVDbyC" version="13.9.8" type="github" pages="7">
   <diagram id="fr02PTJREw938rj9sSep" name="菜单权限">
     <mxGraphModel dx="1251" dy="729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="2900" math="0" shadow="0">
       <root>
@@ -1186,58 +1186,61 @@
         <mxCell id="S-f_3X87goQQtFaPRn-y-31" value="写" style="rounded=1;whiteSpace=wrap;html=1;" parent="Ly_BGtkGU37H3gd4eteT-1" vertex="1">
           <mxGeometry x="2680" y="45" width="50" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="WFnw32iUoLkZvFobeL_d-0" value="规则项目" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="Ly_BGtkGU37H3gd4eteT-1">
+        <mxCell id="WFnw32iUoLkZvFobeL_d-0" value="规则项目" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" parent="Ly_BGtkGU37H3gd4eteT-1" vertex="1">
           <mxGeometry x="140" y="360" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="WFnw32iUoLkZvFobeL_d-1" value="数据规则" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="Ly_BGtkGU37H3gd4eteT-1">
+        <mxCell id="WFnw32iUoLkZvFobeL_d-1" value="数据规则" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" parent="Ly_BGtkGU37H3gd4eteT-1" vertex="1">
           <mxGeometry x="140" y="530" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="WFnw32iUoLkZvFobeL_d-2" value="数据功能权限&lt;br&gt;（perm01）" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="Ly_BGtkGU37H3gd4eteT-1">
+        <mxCell id="WFnw32iUoLkZvFobeL_d-2" value="数据功能权限" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" parent="Ly_BGtkGU37H3gd4eteT-1" vertex="1">
           <mxGeometry x="140" y="670" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="WFnw32iUoLkZvFobeL_d-3" value="表元数据信息" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="Ly_BGtkGU37H3gd4eteT-1">
+        <mxCell id="WFnw32iUoLkZvFobeL_d-3" value="表元数据信息" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" parent="Ly_BGtkGU37H3gd4eteT-1" vertex="1">
           <mxGeometry x="500" y="360" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="WFnw32iUoLkZvFobeL_d-4" value="映射表或库" style="html=1;verticalAlign=bottom;endArrow=block;fontSize=14;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="Ly_BGtkGU37H3gd4eteT-1" target="WFnw32iUoLkZvFobeL_d-3">
+        <mxCell id="WFnw32iUoLkZvFobeL_d-4" value="映射表" style="html=1;verticalAlign=bottom;endArrow=block;fontSize=14;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="Ly_BGtkGU37H3gd4eteT-1" target="WFnw32iUoLkZvFobeL_d-3" edge="1">
           <mxGeometry width="80" relative="1" as="geometry">
             <mxPoint x="260" y="390" as="sourcePoint" />
             <mxPoint x="340" y="390" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="WFnw32iUoLkZvFobeL_d-5" value="对应规则项目的权限类型&lt;br&gt;（读、写）" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="Ly_BGtkGU37H3gd4eteT-1">
+        <mxCell id="WFnw32iUoLkZvFobeL_d-5" value="某个表拥有什么权限" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" parent="Ly_BGtkGU37H3gd4eteT-1" vertex="1">
           <mxGeometry x="500" y="530" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="WFnw32iUoLkZvFobeL_d-6" value="" style="html=1;verticalAlign=bottom;endArrow=block;fontSize=14;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="Ly_BGtkGU37H3gd4eteT-1" target="WFnw32iUoLkZvFobeL_d-5">
+        <mxCell id="WFnw32iUoLkZvFobeL_d-6" value="" style="html=1;verticalAlign=bottom;endArrow=block;fontSize=14;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="Ly_BGtkGU37H3gd4eteT-1" target="WFnw32iUoLkZvFobeL_d-5" edge="1">
           <mxGeometry width="80" relative="1" as="geometry">
             <mxPoint x="260" y="560" as="sourcePoint" />
             <mxPoint x="340" y="560" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="WFnw32iUoLkZvFobeL_d-7" value="映射权限类型" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;" vertex="1" connectable="0" parent="WFnw32iUoLkZvFobeL_d-6">
+        <mxCell id="WFnw32iUoLkZvFobeL_d-7" value="映射权限类型" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;" parent="WFnw32iUoLkZvFobeL_d-6" vertex="1" connectable="0">
           <mxGeometry x="-0.0174" y="4" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="WFnw32iUoLkZvFobeL_d-8" value="角色与规则的组合（表-读）" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="Ly_BGtkGU37H3gd4eteT-1">
+        <mxCell id="WFnw32iUoLkZvFobeL_d-8" value="模块下的大规则" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" parent="Ly_BGtkGU37H3gd4eteT-1" vertex="1">
           <mxGeometry x="500" y="670" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="WFnw32iUoLkZvFobeL_d-9" value="表与权限的关联" style="html=1;verticalAlign=bottom;endArrow=block;fontSize=14;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="Ly_BGtkGU37H3gd4eteT-1" target="WFnw32iUoLkZvFobeL_d-8">
+        <mxCell id="WFnw32iUoLkZvFobeL_d-9" value="" style="html=1;verticalAlign=bottom;endArrow=block;fontSize=14;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="Ly_BGtkGU37H3gd4eteT-1" target="WFnw32iUoLkZvFobeL_d-8" edge="1">
           <mxGeometry width="80" relative="1" as="geometry">
             <mxPoint x="260" y="700" as="sourcePoint" />
             <mxPoint x="340" y="700" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="WFnw32iUoLkZvFobeL_d-10" value="规则明细" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="Ly_BGtkGU37H3gd4eteT-1">
+        <mxCell id="WFnw32iUoLkZvFobeL_d-10" value="规则明细" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" parent="Ly_BGtkGU37H3gd4eteT-1" vertex="1">
           <mxGeometry x="180" y="440" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="WFnw32iUoLkZvFobeL_d-11" value="行数据" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="Ly_BGtkGU37H3gd4eteT-1">
+        <mxCell id="WFnw32iUoLkZvFobeL_d-11" value="行数据" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" parent="Ly_BGtkGU37H3gd4eteT-1" vertex="1">
           <mxGeometry x="570" y="440" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="WFnw32iUoLkZvFobeL_d-12" value="设置条件，字段值" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=14;" edge="1" parent="Ly_BGtkGU37H3gd4eteT-1" target="WFnw32iUoLkZvFobeL_d-11">
+        <mxCell id="WFnw32iUoLkZvFobeL_d-12" value="设置条件，字段值" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=14;" parent="Ly_BGtkGU37H3gd4eteT-1" target="WFnw32iUoLkZvFobeL_d-11" edge="1">
           <mxGeometry width="80" relative="1" as="geometry">
             <mxPoint x="300" y="470" as="sourcePoint" />
             <mxPoint x="380" y="470" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="pI6AJ5_QqTcxZnvpVjlr-0" value="类型：读写权限" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="Ly_BGtkGU37H3gd4eteT-1">
+          <mxGeometry x="210" y="600" width="70" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
