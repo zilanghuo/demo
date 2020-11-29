@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-11-16T06:53:32.825Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.193 Safari/537.36" etag="5MXFmNr5uyk65yXVDbyC" version="13.9.8" type="github" pages="7">
+<mxfile host="app.diagrams.net" modified="2020-11-29T02:39:20.492Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36" etag="d9lP-6eTqpBta9qkDFeC" version="13.10.3" type="github" pages="8">
   <diagram id="fr02PTJREw938rj9sSep" name="菜单权限">
-    <mxGraphModel dx="1251" dy="729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="2900" math="0" shadow="0">
+    <mxGraphModel dx="1251" dy="677" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="2900" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1241,6 +1241,115 @@
         </mxCell>
         <mxCell id="pI6AJ5_QqTcxZnvpVjlr-0" value="类型：读写权限" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="Ly_BGtkGU37H3gd4eteT-1">
           <mxGeometry x="210" y="600" width="70" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="2zNgne01onxNUUdyAxBL" name="组织管理">
+    <mxGraphModel dx="1043" dy="608" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="SKu8yvKqloKr0QvR27ud-0" />
+        <mxCell id="SKu8yvKqloKr0QvR27ud-1" parent="SKu8yvKqloKr0QvR27ud-0" />
+        <mxCell id="SKu8yvKqloKr0QvR27ud-2" value="创建组织" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="SKu8yvKqloKr0QvR27ud-1">
+          <mxGeometry x="50" y="20" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="SKu8yvKqloKr0QvR27ud-3" value="用户" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="SKu8yvKqloKr0QvR27ud-1">
+          <mxGeometry x="180" y="40" width="100" height="760" as="geometry" />
+        </mxCell>
+        <mxCell id="SKu8yvKqloKr0QvR27ud-7" value="组织信息、所有者" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="SKu8yvKqloKr0QvR27ud-3" target="SKu8yvKqloKr0QvR27ud-4">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="50" y="80" as="sourcePoint" />
+            <mxPoint x="130" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SKu8yvKqloKr0QvR27ud-4" value="用户管理" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="SKu8yvKqloKr0QvR27ud-1">
+          <mxGeometry x="370" y="40" width="100" height="660" as="geometry" />
+        </mxCell>
+        <mxCell id="SKu8yvKqloKr0QvR27ud-8" value="1 创建组织" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="SKu8yvKqloKr0QvR27ud-4" target="SKu8yvKqloKr0QvR27ud-5">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="50" y="110" as="sourcePoint" />
+            <mxPoint x="130" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SKu8yvKqloKr0QvR27ud-9" value="2 组织授权给应用" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="SKu8yvKqloKr0QvR27ud-4" target="SKu8yvKqloKr0QvR27ud-5">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="50" y="140" as="sourcePoint" />
+            <mxPoint x="130" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SKu8yvKqloKr0QvR27ud-10" value="3 创建角色(组织管理员)" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="SKu8yvKqloKr0QvR27ud-4" target="SKu8yvKqloKr0QvR27ud-5">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="50" y="180" as="sourcePoint" />
+            <mxPoint x="130" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SKu8yvKqloKr0QvR27ud-12" value="5 角色关联给组织" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="SKu8yvKqloKr0QvR27ud-4" target="SKu8yvKqloKr0QvR27ud-5">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="50" y="240" as="sourcePoint" />
+            <mxPoint x="130" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SKu8yvKqloKr0QvR27ud-13" value="6 角色分配给所有者" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="SKu8yvKqloKr0QvR27ud-4" target="SKu8yvKqloKr0QvR27ud-5">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="50" y="280" as="sourcePoint" />
+            <mxPoint x="130" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SKu8yvKqloKr0QvR27ud-17" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="SKu8yvKqloKr0QvR27ud-4">
+          <mxGeometry x="45" y="390" width="10" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="SKu8yvKqloKr0QvR27ud-18" value="异步模块（三个默认角色）" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;entryX=1;entryY=0;" edge="1" target="SKu8yvKqloKr0QvR27ud-17" parent="SKu8yvKqloKr0QvR27ud-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="50" y="370" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="75" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SKu8yvKqloKr0QvR27ud-5" value="集团" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="SKu8yvKqloKr0QvR27ud-1">
+          <mxGeometry x="570" y="40" width="100" height="760" as="geometry" />
+        </mxCell>
+        <mxCell id="SKu8yvKqloKr0QvR27ud-20" value="2 默认角色创建" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="SKu8yvKqloKr0QvR27ud-5" target="SKu8yvKqloKr0QvR27ud-6">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="50" y="470" as="sourcePoint" />
+            <mxPoint x="130" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SKu8yvKqloKr0QvR27ud-6" value="大数据系统" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="SKu8yvKqloKr0QvR27ud-1">
+          <mxGeometry x="770" y="40" width="100" height="760" as="geometry" />
+        </mxCell>
+        <mxCell id="SKu8yvKqloKr0QvR27ud-11" value="4 创建组织管理员" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="SKu8yvKqloKr0QvR27ud-1" source="SKu8yvKqloKr0QvR27ud-4" target="SKu8yvKqloKr0QvR27ud-6">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="620" y="240" as="sourcePoint" />
+            <mxPoint x="700" y="240" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="630" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SKu8yvKqloKr0QvR27ud-14" value="7 角色分配人员" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="SKu8yvKqloKr0QvR27ud-1" source="SKu8yvKqloKr0QvR27ud-4" target="SKu8yvKqloKr0QvR27ud-6">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="620" y="350" as="sourcePoint" />
+            <mxPoint x="700" y="350" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="650" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SKu8yvKqloKr0QvR27ud-16" value="8 成功" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" edge="1" parent="SKu8yvKqloKr0QvR27ud-1" target="SKu8yvKqloKr0QvR27ud-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="390" as="sourcePoint" />
+            <mxPoint x="340" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SKu8yvKqloKr0QvR27ud-19" value="1 默认角色创建" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="SKu8yvKqloKr0QvR27ud-1" source="SKu8yvKqloKr0QvR27ud-4" target="SKu8yvKqloKr0QvR27ud-5">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="440" y="470" as="sourcePoint" />
+            <mxPoint x="520" y="470" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="530" y="480" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
