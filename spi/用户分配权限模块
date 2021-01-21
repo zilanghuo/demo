@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-11-29T03:15:35.464Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36" etag="3tu7yELupJbifYdmW192" version="13.10.3" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2021-01-21T07:48:23.679Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36" etag="uJgjJggfM56-HMUFkqc1" version="14.2.6" type="github" pages="9">
   <diagram id="fr02PTJREw938rj9sSep" name="菜单权限">
-    <mxGraphModel dx="1251" dy="677" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="2900" math="0" shadow="0">
+    <mxGraphModel dx="1233" dy="708" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="2900" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1474,6 +1474,29 @@
             <mxPoint x="650" y="1730" as="sourcePoint" />
             <mxPoint x="570" y="1730" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="6lD3Yrv0BGluoJzn0CJx" name="权限设计模式">
+    <mxGraphModel dx="715" dy="415" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="6G76MVuj7J1301nApKM0-0" />
+        <mxCell id="6G76MVuj7J1301nApKM0-1" parent="6G76MVuj7J1301nApKM0-0" />
+        <mxCell id="6G76MVuj7J1301nApKM0-4" value="AbstractGiveJurisdiction" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="6G76MVuj7J1301nApKM0-1">
+          <mxGeometry x="130" y="70" width="390" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="6G76MVuj7J1301nApKM0-5" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="6G76MVuj7J1301nApKM0-4">
+          <mxGeometry y="26" width="390" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="6G76MVuj7J1301nApKM0-6" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="6G76MVuj7J1301nApKM0-4">
+          <mxGeometry y="52" width="390" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="6G76MVuj7J1301nApKM0-7" value="+ giveJurisdiction(addRules,removeRules,authId): boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="6G76MVuj7J1301nApKM0-4">
+          <mxGeometry y="60" width="390" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6G76MVuj7J1301nApKM0-11" value="+ generatorJurisdiction(rules,moduleType): String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="6G76MVuj7J1301nApKM0-4">
+          <mxGeometry y="90" width="390" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
