@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-01-21T07:50:39.080Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36" etag="Cz97XM3UMuWfsmLbmI6G" version="14.2.6" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2021-01-22T01:40:14.433Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36" etag="IA8CgBN6ShbVdWGy0MB2" version="14.2.6" type="github" pages="9">
   <diagram id="fr02PTJREw938rj9sSep" name="菜单权限">
     <mxGraphModel dx="1233" dy="708" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="2900" math="0" shadow="0">
       <root>
@@ -1484,22 +1484,25 @@
         <mxCell id="6G76MVuj7J1301nApKM0-0" />
         <mxCell id="6G76MVuj7J1301nApKM0-1" parent="6G76MVuj7J1301nApKM0-0" />
         <mxCell id="6G76MVuj7J1301nApKM0-4" value="AbstractGiveJurisdiction" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="6G76MVuj7J1301nApKM0-1">
-          <mxGeometry x="130" y="70" width="390" height="150" as="geometry" />
+          <mxGeometry x="130" y="70" width="350" height="180" as="geometry" />
         </mxCell>
         <mxCell id="6G76MVuj7J1301nApKM0-5" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="6G76MVuj7J1301nApKM0-4">
-          <mxGeometry y="26" width="390" height="26" as="geometry" />
+          <mxGeometry y="26" width="350" height="26" as="geometry" />
         </mxCell>
         <mxCell id="6G76MVuj7J1301nApKM0-6" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="6G76MVuj7J1301nApKM0-4">
-          <mxGeometry y="52" width="390" height="8" as="geometry" />
+          <mxGeometry y="52" width="350" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="6G76MVuj7J1301nApKM0-7" value="+ giveJurisdiction(addRules,removeRules,authId): boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="6G76MVuj7J1301nApKM0-4">
-          <mxGeometry y="60" width="390" height="30" as="geometry" />
+        <mxCell id="6G76MVuj7J1301nApKM0-7" value="+ updateJurisdiction(addRules,removeRules,authId): boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="6G76MVuj7J1301nApKM0-4">
+          <mxGeometry y="60" width="350" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="6G76MVuj7J1301nApKM0-11" value="+ generatorJurisdiction(rules,moduleType): String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="6G76MVuj7J1301nApKM0-4">
-          <mxGeometry y="90" width="390" height="30" as="geometry" />
+        <mxCell id="6G76MVuj7J1301nApKM0-11" value="+ generatorJurisdiction(rules,moduleType,roleCode): String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="6G76MVuj7J1301nApKM0-4">
+          <mxGeometry y="90" width="350" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="6G76MVuj7J1301nApKM0-12" value="+ getJurisdiction(authid): List&lt;rules&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="6G76MVuj7J1301nApKM0-4">
-          <mxGeometry y="120" width="390" height="30" as="geometry" />
+        <mxCell id="6G76MVuj7J1301nApKM0-12" value="+ getJurisdiction(moduleType,authid): List&lt;rules&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="6G76MVuj7J1301nApKM0-4">
+          <mxGeometry y="120" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6G76MVuj7J1301nApKM0-13" value="+ generateJurisdictionRuls(ruleid,moduleType): List&lt;rules&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="6G76MVuj7J1301nApKM0-4">
+          <mxGeometry y="150" width="350" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
