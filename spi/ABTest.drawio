@@ -1,1 +1,22 @@
-<mxfile host="app.diagrams.net" modified="2021-03-01T02:00:19.183Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36" version="14.4.3" etag="VAqe5s0YRsb7D-22mJNy" type="github"><diagram id="EUV3ePMlZK-PbHkNR1l-">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-03-01T02:03:07.584Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36" etag="Rtnqbk2MMjMv7yOcpaZX" version="14.4.3" type="github">
+  <diagram id="EUV3ePMlZK-PbHkNR1l-" name="Page-1">
+    <mxGraphModel dx="715" dy="415" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="dA_OjoRXD8D9DYmpGyxw-1" value="&lt;h1&gt;场景一&lt;/h1&gt;&lt;p&gt;一个模型，两个规则&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="30" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dA_OjoRXD8D9DYmpGyxw-2" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="60" width="250" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="dA_OjoRXD8D9DYmpGyxw-3" value="规则1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="100" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dA_OjoRXD8D9DYmpGyxw-4" value="规则二" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="384" y="100" width="60" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
