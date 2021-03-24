@@ -1,1 +1,77 @@
-<mxfile host="app.diagrams.net" modified="2021-03-24T06:56:47.669Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" version="14.4.8" etag="qk7XwLtRstq5xnjXfgal" type="github"><diagram id="8aklKF8A69rxBMzQCYdT">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-03-24T07:45:04.887Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" etag="nmrdkEKvxqFoqxO6u4_H" version="14.4.8" type="github">
+  <diagram id="8aklKF8A69rxBMzQCYdT" name="Page-1">
+    <mxGraphModel dx="1833" dy="1011" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zoeWdLp7Y6SKVzYbuP2e-1" value="&lt;div style=&quot;text-align: left ; line-height: 1.75 ; font-size: 14px&quot;&gt;job_mid_stock_adj_order_wms_di&lt;/div&gt;&lt;div style=&quot;text-align: left ; line-height: 1.75 ; font-size: 14px&quot;&gt;（依赖-cron触发-&lt;/div&gt;&lt;span style=&quot;font-family: &amp;#34;myriad set pro&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , sans-serif ; font-size: 14px ; background-color: rgb(255 , 255 , 255)&quot;&gt;0 40 07 * * ?&lt;/span&gt;&lt;span style=&quot;font-size: 14px ; text-align: left&quot;&gt;）&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;myriad set pro&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , sans-serif ; font-size: 14px ; background-color: rgb(255 , 255 , 255)&quot;&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="520" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="zoeWdLp7Y6SKVzYbuP2e-2" value="&lt;span style=&quot;font-family: &amp;#34;myriad set pro&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , sans-serif ; background-color: rgb(240 , 240 , 240)&quot;&gt;job_ods_wms_inv_center_inv_adjustment_di&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="250" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zoeWdLp7Y6SKVzYbuP2e-5" value="&lt;span style=&quot;font-family: &amp;#34;myriad set pro&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , sans-serif ; background-color: rgba(240 , 240 , 240 , 0.333)&quot;&gt;job_ods_wms_inv_center_inv_adjustment_detail_di&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="250" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="zoeWdLp7Y6SKVzYbuP2e-6" value="&lt;span style=&quot;font-family: &amp;#34;myriad set pro&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , sans-serif ; background-color: rgb(240 , 240 , 240)&quot;&gt;job_ods_wms_mst_center_mst_company_warehouse_df&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="250" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="zoeWdLp7Y6SKVzYbuP2e-7" value="" style="endArrow=classic;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="zoeWdLp7Y6SKVzYbuP2e-1" target="zoeWdLp7Y6SKVzYbuP2e-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="500" as="sourcePoint" />
+            <mxPoint x="440" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zoeWdLp7Y6SKVzYbuP2e-18" value="寻找被依赖的DAG_IDS" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="zoeWdLp7Y6SKVzYbuP2e-7">
+          <mxGeometry x="0.2111" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zoeWdLp7Y6SKVzYbuP2e-8" value="" style="endArrow=classic;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="zoeWdLp7Y6SKVzYbuP2e-1" target="zoeWdLp7Y6SKVzYbuP2e-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="890" y="460" as="sourcePoint" />
+            <mxPoint x="940" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zoeWdLp7Y6SKVzYbuP2e-9" value="" style="endArrow=classic;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="zoeWdLp7Y6SKVzYbuP2e-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="770" y="520" as="sourcePoint" />
+            <mxPoint x="1180" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zoeWdLp7Y6SKVzYbuP2e-10" value="&lt;span style=&quot;font-family: &amp;#34;myriad set pro&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , sans-serif ; background-color: rgb(240 , 240 , 240)&quot;&gt;job_stg_wms_inv_center_inv_adjustment_di&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="80" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zoeWdLp7Y6SKVzYbuP2e-11" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="zoeWdLp7Y6SKVzYbuP2e-2" target="zoeWdLp7Y6SKVzYbuP2e-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="450" y="240" as="sourcePoint" />
+            <mxPoint x="500" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zoeWdLp7Y6SKVzYbuP2e-12" value="依赖触发" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="zoeWdLp7Y6SKVzYbuP2e-11">
+          <mxGeometry x="0.1272" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zoeWdLp7Y6SKVzYbuP2e-14" value="&lt;span style=&quot;font-family: &amp;#34;myriad set pro&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , sans-serif ; background-color: rgba(240 , 240 , 240 , 0.886)&quot;&gt;job_stg_wms_inv_center_inv_adjustment_detail_di&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="80" width="330" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="zoeWdLp7Y6SKVzYbuP2e-15" value="依赖触发" style="endArrow=classic;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="zoeWdLp7Y6SKVzYbuP2e-5" target="zoeWdLp7Y6SKVzYbuP2e-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1090" y="210" as="sourcePoint" />
+            <mxPoint x="1140" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zoeWdLp7Y6SKVzYbuP2e-16" value="&lt;span style=&quot;font-family: &amp;#34;myriad set pro&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , sans-serif ; background-color: rgb(240 , 240 , 240)&quot;&gt;job_stg_wms_mst_center_mst_company_warehouse_df&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="80" width="330" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="zoeWdLp7Y6SKVzYbuP2e-17" value="依赖触发" style="endArrow=classic;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="zoeWdLp7Y6SKVzYbuP2e-6" target="zoeWdLp7Y6SKVzYbuP2e-16">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1180" y="190" as="sourcePoint" />
+            <mxPoint x="1550" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
