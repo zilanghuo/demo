@@ -1,0 +1,151 @@
+<mxfile host="app.diagrams.net" modified="2021-03-24T09:40:42.820Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" etag="COHarIvEV6IOiEUS75M-" version="14.4.8" type="github">
+  <diagram id="8aklKF8A69rxBMzQCYdT" name="实例生成">
+    <mxGraphModel dx="1472" dy="855" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zoeWdLp7Y6SKVzYbuP2e-1" value="&lt;div style=&quot;text-align: left ; line-height: 1.75 ; font-size: 14px&quot;&gt;job_mid_stock_adj_order_wms_di&lt;/div&gt;&lt;div style=&quot;text-align: left ; line-height: 1.75 ; font-size: 14px&quot;&gt;（依赖-cron触发-&lt;/div&gt;&lt;span style=&quot;font-family: &amp;#34;myriad set pro&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , sans-serif ; font-size: 14px ; background-color: rgb(255 , 255 , 255)&quot;&gt;0 40 07 * * ?&lt;/span&gt;&lt;span style=&quot;font-size: 14px ; text-align: left&quot;&gt;）&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;myriad set pro&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , sans-serif ; font-size: 14px ; background-color: rgb(255 , 255 , 255)&quot;&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="590" y="500" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="zoeWdLp7Y6SKVzYbuP2e-2" value="&lt;span style=&quot;font-family: &amp;#34;myriad set pro&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , sans-serif ; background-color: rgb(240 , 240 , 240)&quot;&gt;job_ods_wms_inv_center_inv_adjustment_di&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="150" y="250" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zoeWdLp7Y6SKVzYbuP2e-5" value="&lt;span style=&quot;font-family: &amp;#34;myriad set pro&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , sans-serif ; background-color: rgba(240 , 240 , 240 , 0.333)&quot;&gt;job_ods_wms_inv_center_inv_adjustment_detail_di&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="590" y="250" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="zoeWdLp7Y6SKVzYbuP2e-6" value="&lt;span style=&quot;font-family: &amp;#34;myriad set pro&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , sans-serif ; background-color: rgb(240 , 240 , 240)&quot;&gt;job_ods_wms_mst_center_mst_company_warehouse_df&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1100" y="250" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="zoeWdLp7Y6SKVzYbuP2e-7" value="" style="endArrow=classic;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="zoeWdLp7Y6SKVzYbuP2e-1" target="zoeWdLp7Y6SKVzYbuP2e-2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="500" as="sourcePoint" />
+            <mxPoint x="440" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zoeWdLp7Y6SKVzYbuP2e-8" value="" style="endArrow=classic;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="zoeWdLp7Y6SKVzYbuP2e-1" target="zoeWdLp7Y6SKVzYbuP2e-5" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="890" y="460" as="sourcePoint" />
+            <mxPoint x="940" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zoeWdLp7Y6SKVzYbuP2e-9" value="" style="endArrow=classic;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" target="zoeWdLp7Y6SKVzYbuP2e-6" edge="1" source="zoeWdLp7Y6SKVzYbuP2e-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="770" y="520" as="sourcePoint" />
+            <mxPoint x="1180" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zoeWdLp7Y6SKVzYbuP2e-10" value="&lt;span style=&quot;font-family: &amp;#34;myriad set pro&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , sans-serif ; background-color: rgb(240 , 240 , 240)&quot;&gt;job_stg_wms_inv_center_inv_adjustment_di&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;myriad set pro&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , sans-serif ; font-size: 14px ; background-color: rgb(255 , 255 , 255)&quot;&gt;0 10 07 * * ?&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;myriad set pro&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , sans-serif ; background-color: rgb(240 , 240 , 240)&quot;&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="150" y="80" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zoeWdLp7Y6SKVzYbuP2e-11" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="zoeWdLp7Y6SKVzYbuP2e-2" target="zoeWdLp7Y6SKVzYbuP2e-10" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="450" y="240" as="sourcePoint" />
+            <mxPoint x="500" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zoeWdLp7Y6SKVzYbuP2e-12" value="依赖触发" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="zoeWdLp7Y6SKVzYbuP2e-11" vertex="1" connectable="0">
+          <mxGeometry x="0.1272" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zoeWdLp7Y6SKVzYbuP2e-14" value="&lt;span style=&quot;font-family: &amp;#34;myriad set pro&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , sans-serif ; background-color: rgba(240 , 240 , 240 , 0.886)&quot;&gt;job_stg_wms_inv_center_inv_adjustment_detail_di&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;myriad set pro&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , sans-serif ; font-size: 14px ; background-color: rgb(255 , 255 , 255)&quot;&gt;0 10 07 * * ?&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;myriad set pro&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , sans-serif ; background-color: rgba(240 , 240 , 240 , 0.886)&quot;&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="590" y="80" width="330" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="zoeWdLp7Y6SKVzYbuP2e-15" value="依赖触发" style="endArrow=classic;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="zoeWdLp7Y6SKVzYbuP2e-5" target="zoeWdLp7Y6SKVzYbuP2e-14" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1090" y="210" as="sourcePoint" />
+            <mxPoint x="1140" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zoeWdLp7Y6SKVzYbuP2e-16" value="&lt;span style=&quot;font-family: &amp;#34;myriad set pro&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , sans-serif ; background-color: rgb(240 , 240 , 240)&quot;&gt;job_stg_wms_mst_center_mst_company_warehouse_df&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;myriad set pro&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , sans-serif ; font-size: 14px ; background-color: rgb(255 , 255 , 255)&quot;&gt;0 10 07 * * ?&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;myriad set pro&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , sans-serif ; background-color: rgb(240 , 240 , 240)&quot;&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1100" y="80" width="330" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="zoeWdLp7Y6SKVzYbuP2e-17" value="依赖触发" style="endArrow=classic;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="zoeWdLp7Y6SKVzYbuP2e-6" target="zoeWdLp7Y6SKVzYbuP2e-16" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1180" y="190" as="sourcePoint" />
+            <mxPoint x="1550" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j4MAswUvf7kPhv8aGwtV-1" value="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="265" y="50" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j4MAswUvf7kPhv8aGwtV-2" value="2" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="735" y="50" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j4MAswUvf7kPhv8aGwtV-3" value="3" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="1245" y="50" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j4MAswUvf7kPhv8aGwtV-6" value="&lt;div style=&quot;text-align: left ; line-height: 1.75 ; font-size: 14px&quot;&gt;lai_01_01_01_aa&lt;/div&gt;&lt;div style=&quot;text-align: left ; line-height: 1.75 ; font-size: 14px&quot;&gt;（依赖-cron触发-&lt;/div&gt;&lt;span style=&quot;font-family: &amp;#34;myriad set pro&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , sans-serif ; font-size: 14px ; background-color: rgb(255 , 255 , 255)&quot;&gt;8点&lt;/span&gt;&lt;span style=&quot;font-size: 14px ; text-align: left&quot;&gt;）&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;myriad set pro&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , sans-serif ; font-size: 14px ; background-color: rgb(255 , 255 , 255)&quot;&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="1560" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="j4MAswUvf7kPhv8aGwtV-7" value="&lt;span style=&quot;font-family: &amp;#34;myriad set pro&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , sans-serif ; background-color: rgb(240 , 240 , 240)&quot;&gt;lai_03：3点触发&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="1210" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="j4MAswUvf7kPhv8aGwtV-8" value="&lt;span style=&quot;font-family: &amp;#34;myriad set pro&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , sans-serif ; background-color: rgba(240 , 240 , 240 , 0.333)&quot;&gt;lai_01_01_01&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="1260" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="j4MAswUvf7kPhv8aGwtV-10" value="" style="endArrow=classic;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="j4MAswUvf7kPhv8aGwtV-6" target="j4MAswUvf7kPhv8aGwtV-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="1510" as="sourcePoint" />
+            <mxPoint x="450" y="1460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j4MAswUvf7kPhv8aGwtV-11" value="寻找被依赖的DAG_IDS" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="j4MAswUvf7kPhv8aGwtV-10">
+          <mxGeometry x="0.2111" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j4MAswUvf7kPhv8aGwtV-12" value="" style="endArrow=classic;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="j4MAswUvf7kPhv8aGwtV-6" target="j4MAswUvf7kPhv8aGwtV-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="900" y="1470" as="sourcePoint" />
+            <mxPoint x="950" y="1420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j4MAswUvf7kPhv8aGwtV-17" value="&lt;span style=&quot;font-family: &amp;#34;myriad set pro&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , sans-serif ; background-color: rgba(240 , 240 , 240 , 0.886)&quot;&gt;lai_01_01&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="1090" width="330" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="j4MAswUvf7kPhv8aGwtV-18" value="依赖触发" style="endArrow=classic;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="j4MAswUvf7kPhv8aGwtV-8" target="j4MAswUvf7kPhv8aGwtV-17">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1100" y="1220" as="sourcePoint" />
+            <mxPoint x="1150" y="1170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j4MAswUvf7kPhv8aGwtV-22" value="2" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="1225" y="1050" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j4MAswUvf7kPhv8aGwtV-24" value="&lt;span style=&quot;font-family: &amp;#34;myriad set pro&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , sans-serif ; background-color: rgba(240 , 240 , 240 , 0.886)&quot;&gt;lai_01：7点、9点&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="870" y="910" width="330" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="j4MAswUvf7kPhv8aGwtV-25" value="&lt;span style=&quot;font-family: &amp;#34;myriad set pro&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , sans-serif ; background-color: rgba(240 , 240 , 240 , 0.886)&quot;&gt;lai_02：8点&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1380" y="910" width="330" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="j4MAswUvf7kPhv8aGwtV-26" value="" style="endArrow=classic;html=1;fontSize=18;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="j4MAswUvf7kPhv8aGwtV-17" target="j4MAswUvf7kPhv8aGwtV-24">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="1210" as="sourcePoint" />
+            <mxPoint x="810" y="1160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j4MAswUvf7kPhv8aGwtV-27" value="" style="endArrow=classic;html=1;fontSize=18;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="j4MAswUvf7kPhv8aGwtV-17" target="j4MAswUvf7kPhv8aGwtV-25">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1850" y="1230" as="sourcePoint" />
+            <mxPoint x="1900" y="1180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j4MAswUvf7kPhv8aGwtV-28" value="依赖触发" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;" vertex="1" connectable="0" parent="j4MAswUvf7kPhv8aGwtV-27">
+          <mxGeometry x="0.0157" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j4MAswUvf7kPhv8aGwtV-30" value="&lt;div style=&quot;text-align: left ; line-height: 1.75 ; font-size: 14px&quot;&gt;&lt;span style=&quot;font-size: 18px ; text-align: center&quot;&gt;job_dwd_stock_adj_wms_di&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left ; line-height: 1.75 ; font-size: 14px&quot;&gt;（依赖-cron触发-&lt;/div&gt;&lt;span style=&quot;font-family: &amp;#34;myriad set pro&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , sans-serif ; font-size: 14px ; background-color: rgb(255 , 255 , 255)&quot;&gt;0 40 07 * * ?&lt;/span&gt;&lt;span style=&quot;font-size: 14px ; text-align: left&quot;&gt;）&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;myriad set pro&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , sans-serif ; font-size: 14px ; background-color: rgb(255 , 255 , 255)&quot;&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="680" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="j4MAswUvf7kPhv8aGwtV-31" value="" style="endArrow=classic;html=1;fontSize=18;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="j4MAswUvf7kPhv8aGwtV-30" target="zoeWdLp7Y6SKVzYbuP2e-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="780" y="740" as="sourcePoint" />
+            <mxPoint x="830" y="690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
