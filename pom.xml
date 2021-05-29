@@ -38,6 +38,7 @@
         <module>springcloud</module>
         <module>sofademo</module>
         <module>testOne</module>
+        <module>sentinel</module>
     </modules>
 
     <dependencies>
