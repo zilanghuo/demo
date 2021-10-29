@@ -39,6 +39,7 @@
         <module>sofademo</module>
         <module>testOne</module>
         <module>sentinel</module>
+        <module>dbutil</module>
     </modules>
 
     <dependencies>

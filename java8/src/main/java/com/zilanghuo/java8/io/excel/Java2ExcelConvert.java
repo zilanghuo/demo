@@ -20,7 +20,7 @@ import java.util.List;
 public class Java2ExcelConvert {
 
     public static void writeWithoutHead(DataResult result) throws IOException {
-        try (OutputStream out = new FileOutputStream("E:\\2007.xls");) {
+        try (OutputStream out = new FileOutputStream("/Users/admin/Desktop/sql.xls");) {
             ExcelWriter writer = new ExcelWriter(out, ExcelTypeEnum.XLS, false);
             Sheet sheet1 = new Sheet(1, 0);
             sheet1.setSheetName("20190304-20190310");
