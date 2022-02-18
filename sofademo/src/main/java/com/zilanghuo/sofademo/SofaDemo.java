@@ -11,7 +11,7 @@ public class SofaDemo {
 
     public static void main(String[] args) throws Exception {
         RegistryClientConfig config= DefaultRegistryClientConfigBuilder.start().setRegistryEndpoint("127.0.0.1")
-                .setRegistryEndpointPort(9603).build();
+                .setRegistryEndpointPort(96032222).build();
         DefaultRegistryClient registryClient=new DefaultRegistryClient(config);
         registryClient.init();
 
