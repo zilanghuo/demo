@@ -41,6 +41,7 @@
         <module>sentinel</module>
         <module>dbutil</module>
         <module>hmac</module>
+        <module>canal</module>
     </modules>
 
     <dependencies>
