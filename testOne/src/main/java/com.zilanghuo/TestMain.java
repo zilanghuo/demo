@@ -7,9 +7,10 @@ public class TestMain {
 
     public static void main(String[] args) throws Exception {
 
-        for (int i = 0; i < 10; i++) {
-            test(i);
-        }
+        String str = "720m";
+
+
+        System.out.println(str.substring(0,str.length() -1));
 
     }
 
